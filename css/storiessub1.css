@@ -1,0 +1,168 @@
+@import url(./common.css);
+
+main{width:100%;
+    max-width: 1640px;
+    margin:150px auto;}
+
+main .headline{
+    width:100%;
+    text-align: center;
+}
+main .headline>p{
+    display:inline-block;
+    margin:10px auto;
+    border-bottom:1px solid #222222;
+    margin-bottom: 80px;
+    color:#222222;
+    font-weight: bold;
+}
+main .headline>article{
+}
+main .headline>article>h2{
+    color:#222222;
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+main .headline>article>p{
+    margin:20px 0;
+    white-space: pre-line;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    line-height: 2;
+}
+
+main .headline>article>p::after{
+    content: '';
+    display: block;
+    width:2px; height:80px;
+    background-color: black;
+    margin:50px auto;
+}
+
+main .pic{
+    width:100%;
+    margin:0 auto;
+}
+
+main .pic > img{ width:100%;}
+
+main .maintext{
+    width:40%;
+    margin:100px auto;
+
+}
+main .maintext ul{}
+main .maintext ul li{
+    margin:50px auto;
+    line-height: 2;
+    letter-spacing: 0.03rem;
+} 
+main .maintext ul li i{
+    color:#222222;
+    font-family: arno;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 0.07rem;
+}
+
+main .maintext ul li:nth-of-type(2){
+    border-left: 4px solid #222222;
+    padding-left: 30px;
+}
+
+main .maintext ul li a{
+    border-bottom: 1px solid #666666;
+}
+
+main .pic2{
+    width:40%;
+    margin:0 auto;
+}
+main .pic2 h3{
+    margin:20px 0;
+    font-size: 1rem;
+    white-space: pre-line;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    line-height: 1.75;
+}
+main .pic2 figure{
+    width:100%;
+} 
+main .pic2 figure img{
+    width:100%;
+}
+main .pic2 figure figcaption{
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+}
+
+main .subtext{
+    width:40%;
+    margin:50px auto;
+    letter-spacing: 0.03rem;
+}
+main .subtext p{
+    margin:30px 0;
+    font-weight: 300;
+}
+main .subtext p a{
+    border-bottom: 1px solid #222222;
+}
+
+main .sharebox{
+    width:40%;
+    margin:20px auto;
+    display:flex;
+    align-items: center;
+}
+main .sharebox li{
+    width:auto;
+    border:1px solid #66666669;
+    border-radius: 50%;
+    margin:0 5px;
+}
+main .sharebox > li:nth-of-type(1){border-style: none;}
+main .sharebox > li:nth-of-type(4) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -155px -150px;
+    margin-left: 5px;
+}
+
+main .sharebox > li:nth-of-type(3) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -105px -150px;
+    margin-left: 5px;
+}
+
+main .sharebox > li:nth-of-type(2) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -55px -150px;
+    margin-left: 5px;
+}
+
+/* ==================================================================
+==================================================================
+================================================================== */
+    @media(max-width:1023px){
+        main{margin:50px auto;}
+        main .maintext{width:70%;}
+        main .pic2{width:70%;}
+        main .subtext{width:70%;}
+        main .sharebox{width:70%;}
+
+    }
+/* ==================================================================
+==================================================================
+================================================================== */

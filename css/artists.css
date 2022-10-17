@@ -1,0 +1,139 @@
+@import url(./common.css);
+
+main{
+    margin: 200px auto;
+    width: 100%;
+    max-width: 1640px;
+}
+
+.artinav{
+}
+
+.artinav ul{
+    width:100%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.artinav ul li{
+    width:auto;
+}
+
+.artinav ul li::before{
+    content: '';
+    border-left: 1px solid #e5e5e5;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.artinav ul li a{}
+
+.artinav ul li:nth-child(1):before{
+    content: '';
+    border:none;
+    margin-right:50px;
+}
+
+.obj{
+    display: flex;
+    align-items: flex-start;
+    width:70%; height:auto;
+    margin: 100px auto;
+}
+
+.obj .artlist{
+    display:flex;
+
+}
+
+.obj .artlist .artists{
+    font-size: 1.1em;
+    font-weight: 400;
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+.obj .artlist .artists li{
+    font-weight: 700;
+    width:50%;
+    margin-top: 10px;
+}
+
+.obj .artlist .artists li a{}
+
+/* ================================================================================================
+================================================================================================
+================================================================================================ */
+        @media(max-width:1023px){
+            main{
+                margin: 100px auto;
+                width: 98%;
+            }
+
+            .artinav{
+            }
+            
+            .artinav ul{
+                width:80%;
+                margin: 0 auto;
+                display:flex;
+                justify-content: center;
+                font-weight: 200;
+            }
+            
+            .artinav ul li{
+                width:auto;
+            }
+            
+            .artinav ul li::before{
+                content: '';
+                border-left: 1px solid #e5e5e5;
+                margin-right:20px;
+                margin-left:20px;
+            }
+            
+            .artinav ul li a{}
+            
+            .artinav ul li:nth-child(1):before{
+                content: '';
+                border:none;
+                margin-right:50px;
+            }
+
+            .obj{
+                width:100%; height:auto;
+                margin: 100px auto;
+            }
+            .art{display:none;}
+
+            .obj .artlist{           
+            }
+
+            .obj .artlist .artists{
+                font-size: 1em;
+                font-weight: 400;
+                display:inline-block;
+                flex-wrap: wrap;
+            
+            }
+
+            .obj .artlist .artists li{
+                width:100%;
+                margin-top: 10px;
+            }
+
+
+
+
+
+
+
+        }
+
+
+/* ================================================================================================
+================================================================================================
+================================================================================================ */

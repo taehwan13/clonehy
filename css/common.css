@@ -1,0 +1,507 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: AvenirLTStd;
+    src: url(../fonts/AvenirLTStd-Light.woff2);
+}
+@font-face {
+    font-family: ArnoPro-Regular;
+    src: url(../fonts/ArnoPro-Regular.woff2);
+}
+@font-face {
+    font-family:AvenirLTStd-Medium ;
+    src: url(../fonts/AvenirLTStd-Medium.woff2);
+}
+@font-face {
+    font-family: arno;
+    src: url(../fonts/ArnoPro-Regular.woff2);
+}
+html,body{margin:0;}
+*{
+    box-sizing:border-box;
+    color: #666;
+    font-family:'AvenirLTStd','Noto Sans KR', sans-serif;
+    letter-spacing: 0.125em;
+}
+
+ul,li{
+    list-style-type: none;
+    margin:0; padding:0;
+}
+
+figure{margin:0}
+h1,h2,h3,h4,h5,h6,p{margin:0;}
+img{vertical-align: top;}
+a{text-decoration: none;}
+
+header{
+    width:100%; height:12%;
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    text-align: center;
+    position: fixed;
+    top:0%;
+    z-index: 99;
+}
+
+header>div{
+    width:100%;
+    max-width: 1640px;
+    padding-top:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:left;
+    background-color: white;
+    align-items: center;
+}
+
+header>div>button{display:none;}
+header>div>button>span{color:transparent;}
+header>div>h1{
+    width:10%; height:auto;
+    font-size: 0;
+}
+
+header>div>h1>a{}
+
+header>div>h1>a>img{
+    width: 200px; height:16px;
+    
+}
+
+header>div>.headmenu{
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header>div>.headmenu>ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+header>div>.headmenu>ul>li:nth-of-type(5){display:none;}
+header>div>.headmenu>ul>li:nth-of-type(6){display:none;}
+header>div>.headmenu>ul>li>a{
+    margin-left:70px;
+    font-weight: 500;
+    color:#333333;
+    letter-spacing: 0.005em;
+}
+
+header>div>.headsearch{
+    margin:85px auto;
+    width:100%; height:200px;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    display:none;
+    opacity: 0;
+}
+
+header>div>.headsearch>form{
+    text-align: left;
+    padding-left: 600px;
+    padding-top: 50px;
+}
+
+header>div>.headsearch>form>button{
+    border:none;
+}
+
+header>div>.headsearch>form>button::before{
+    content:'';
+    display: inline-block;
+    width:40px; height:40px;
+    background-color: white;
+    background: url(../img/ico_package.png) 0 0 / 600% no-repeat;
+    background-position: 0 2px;
+}
+
+header>div>.headsearch>form>input{
+    border:none;
+    font-size: 2em;
+    border-bottom:1px solid black;}
+
+/* =============================================================================
+=============================================================================
+============================================================================= */
+@media(max-width:1023px){
+    header{
+        width:100%; height:auto;
+        display: flex;
+        margin:0 auto;
+        justify-content: space-between;
+        
+    }
+    header>div{
+        padding: 0 10px;}
+
+    header>div>h1{padding:20px 0;}
+
+    header>div>.menubtn{
+        width:20px; height:20px;
+        display:block;
+        border: none;
+        background-color:transparent;
+        margin:0; padding:0;
+        position: absolute;
+        left:3%; right:auto;
+    }
+    header>div>.srchbtn{
+        display:block;
+        border:none;
+    }
+    header>div>.menubtn>span{
+        position: absolute;
+        left: 0; top:50%;
+        margin:1px; 
+        width:100%; height:1px;
+        background-color: #000;
+    }
+    header>div>.menubtn>span::before{
+        content: '';
+        position: absolute;
+        left: 0; top:0%; 
+        width:100%; height:1px;
+        background-color: #000;
+        margin-top:-6px;
+    }
+
+    header>div>.menubtn>span::after{
+        content: '';
+        position: absolute;
+        left: 0; top:100%; 
+        width:100%; height:1px;
+        background-color: #000;
+        margin-top:5px;
+    }
+
+    header>div>.menubtn.active{
+        width:20px; height:20px;
+        display:block;
+        border: none;
+        background-color:transparent;
+        margin:0; padding:0;
+        position: absolute;
+        left:auto; right:3%;
+    }
+
+    header>div>.menubtn.active>span{
+        position: absolute;
+        left: 0; top:50%;
+        margin:1px; 
+        width:100%; height:1px;
+        background-color: transparent;
+        opacity: 1;
+        z-index:50;
+    }
+    header>div>.menubtn.active>span::before{
+        content: '';
+        position: absolute;
+        left: 0; top:0%; 
+        width:100%; height:1px;
+        background-color: #000;
+        margin-top:0;
+        transform: rotate(135deg);
+        z-index:50;
+        opacity:1;
+    }
+
+    header>div>.menubtn.active>span::after{
+        content: '';
+        position: absolute;
+        left: 0; top:50%; 
+        width:100%; height:1px;
+        background-color: #000;
+        margin-top:0;
+        transform: rotate(-135deg);
+        z-index:50;
+        opacity:1;
+    }
+
+    header>div>.srchbtn{
+        content: '';
+        width:25px; height:25px;
+        background: url('../img/ico_package_2x.png') 0 0 / 500% no-repeat;
+        z-index:20;
+    }
+
+    header>div>h1{
+        width:100%;
+        display:block;
+        align-items: center;
+    }
+    header>div>h1>a{width:100%; height:100%;}
+
+    header>div>h1>a>img{
+    width: 100%;
+    
+}
+    header>div>.headmenu{
+        display: flex;
+        align-items: flex-start;
+        position:fixed;
+        left:0; top:0;
+        width:100%; height:100%;
+        background-color: white;
+        display:none;
+        z-index: 30;
+    }
+
+    header>div>.headmenu::before{
+        content: "MENU";
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100%;
+        padding: 24px 0;
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #fff;
+        text-align: center;
+        font-weight: 900;
+        font-size: 1rem;
+        color: #222;
+    }
+
+    header>div>.headmenu.active{
+        display: flex;
+        align-items: flex-start;
+        position:fixed;
+        left:0; top:0;
+        width:100%; height:100%;
+        background-color: white;
+        z-index: 30;
+    }
+
+    header>div>.headmenu.active::before{
+        content: "MENU";
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 30;
+        width: 100%;
+        padding: 24px 0;
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #fff;
+        text-align: center;
+        font-weight: 900;
+        font-size: 1rem;
+        color: #222;
+    }
+
+    header>div>.headmenu>ul{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin:100px auto;
+        
+    }
+
+    header>div>.headmenu>ul>li{
+        font-size:1.7rem;
+        margin:20px auto;
+    }
+    header>div>.headmenu>ul>li>a{font-weight: bold;}
+    header>div>.headmenu>ul>li:nth-of-type(5){
+        display:block;
+        font-size: 1.1rem;
+        margin:0 auto;
+    }
+    header>div>.headmenu>ul>li:nth-of-type(6){
+        display:block;
+        font-size: 1.1rem;
+        margin:0 auto; margin-top:20px;
+    }
+    header>div>.headmenu>ul>li:nth-of-type(7){display:none;}
+    header>div>.headmenu>ul>li>a{
+        color:#333333;
+        margin:0 auto;
+        
+    }
+}
+
+
+
+
+
+
+
+
+/* =============================================================================
+=============================================================================
+============================================================================= */
+.more{}
+.more a{
+    margin: 100px auto;
+    width:182px; height: 70px;
+    padding-left: 20px;
+    border: 1px solid #66666659;
+    letter-spacing: 0.1em;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+
+.more a figure{
+    width:30%; height: 70px;
+    padding:0;
+    margin:0;
+    background:url(../img/ico_package.png) 0 0  / 600% no-repeat;
+    vertical-align: top;
+    background-position: -130px 27px;
+}
+
+
+footer{
+    width:100%; height:auto;
+    border-top: 1px solid #66666697;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    margin-bottom: 100px;
+}
+footer ul{
+    max-width: 1640px;
+    margin: 50px;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    }
+
+footer ul li{
+    width:15%; height:30px;
+    font-size: 0.75em;
+    color:#222222;
+    text-align: top;
+    display: inline-block;
+
+}
+
+footer ul li a{
+    display: flex;
+    justify-content: baseline;
+    height:30px;
+
+}
+
+footer ul li a::before{
+    content: '';
+    display: inline-block;
+    width:30px; height:30px;
+    background: url(../img/ico_package.png) 0 0 / 700% no-repeat;
+}
+
+footer ul li:nth-child(1) a:before{
+    background-position: 5px -52px;
+}
+
+footer ul li:nth-child(2) a:before{
+    background-position: -40px -52px;
+}
+
+footer ul li:nth-child(3) a:before{
+    background-position: -100px -52px;
+}
+
+footer ul li:nth-child(4) a:before{
+    background-position: -160px -52px;
+}
+
+footer ul li:nth-child(5) a:before{
+    background-position: 5px -105px;
+}
+
+footer > div{
+    text-align: center;
+    margin: 10px 0;
+}
+
+footer > div >  p{
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    color:#66666692;
+}
+
+
+/* ====================================================================
+====================================================================
+==================================================================== */
+@media(max-width:1023px){
+    footer{
+        border-top: 1px solid #66666697;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:0 auto;
+        margin-bottom: 100px;
+    }
+    footer ul{
+        display: flex;
+        justify-content: center;
+        }
+    
+    footer ul li{
+        font-size: 0.75em;
+        color:#222222;
+        text-align: top;
+        display: inline-block;
+        width:auto;
+        margin:0 10px;
+    }
+    
+    footer ul li a{
+        width:20px;
+        display: block;
+        justify-content: baseline;
+        height:30px;
+        overflow: hidden;
+    }
+    
+    footer ul li a::before{
+        content: '';
+        display: inline-block;
+        width:30px; height:30px;
+        background: url(../img/ico_package_2x.png) 0 0 / 700% no-repeat;
+        background-position:  10px 10px;
+    }
+    
+    footer ul li:nth-child(1) a:before{
+        background-position:  4px -45px;
+    }
+    
+    footer ul li:nth-child(2) a:before{
+        background-position:  -45px -45px;
+    }
+    
+    footer ul li:nth-child(3) a:before{
+        background-position:  -105px -45px;
+    }
+    
+    footer ul li:nth-child(4) a:before{
+        background-position:  -160px -45px;
+    }
+    
+    footer ul li:nth-child(5) a:before{
+        background-position:  0px -97px;
+    }
+    
+
+    footer > div{
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    footer > div >  p{
+        margin-bottom:10px;
+        font-size: 0.8rem;
+        letter-spacing: 0.02rem;
+        color:#222222;}
+    }
