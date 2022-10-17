@@ -1,0 +1,514 @@
+@import url(./common.css);
+
+main{
+    width:100%;
+    margin:0 auto;
+    max-width: 1640px;
+}
+
+.artistmain{
+    width:100%; height: auto;
+    margin-bottom:100px;
+    position: relative;
+}
+
+
+.artistmain>figure{width:100%}
+
+.artistmain>figure>img{width:100%}
+
+main>.artinav{
+    text-align: center;
+}
+
+main>.artinav>h1{
+    color:#222222;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    margin:40px 0;
+}
+main>.artinav> .menunav > ul{
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
+main>.artinav>.menunav >ul>li{
+    width:auto;
+}
+
+main>.artinav>.menunav >ul>li::before{
+    content: '';
+    display: inline-block;
+    width:1px; height: 10px;
+    background-color: #999;
+    margin:0 20px;
+}
+
+main>.artinav>.menunav >ul>li:nth-child(1):before{
+    content: '';
+    display: none;
+}
+
+main>.artinav>.menunav >ul>li>a{}
+
+.textbox{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin:50px auto;
+    text-align: left;
+    padding:0 2%;
+}
+.textbox .info{
+    width:30%;
+}
+
+.textbox .info img{
+    width:100%;
+}
+.textbox .info  div{
+    margin-top: 20px;
+}
+.textbox .info > div article{
+}
+.textbox .info > div > article > h3{
+    font-size: 0.8rem;
+    margin-bottom:5px;
+}
+.textbox .info > div article ul{}
+.textbox .info > div article ul li{
+    font-size: 0.8rem;
+    margin:10px 0;
+}
+.textbox .info > div article ul li::before{
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 1px;
+    margin-right: 7px;
+    background-color: #999;
+    vertical-align: middle;
+}
+
+.textbox .info > div article > p {
+    font-size: 0.9rem;
+    letter-spacing: 0.09rem;
+    white-space: pre-line;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.textbox .info > div article > a{
+    font-size: 0.9rem;
+}
+
+
+.textbox .txt{
+    width:60%;
+}
+.textbox .txt > p{
+    margin-bottom:20px;
+    line-height: 1.7rem;
+    letter-spacing: 0.08rem;
+
+}
+.textbox .txt > p:nth-of-type(1){
+    
+}
+.textbox .txt > a{}
+.textbox .txt > div{
+    display:flex;
+    justify-content: space-between;
+}
+.textbox .txt > div > a{
+    color:#222222;
+    letter-spacing: 0.04rem;
+}
+
+.textbox .txt > div > a::after{
+    content: '';
+    display:inline-block;
+    width:15px; height:15px;
+    background: url(../img/ico_package.png);
+    background-position: 0 -145px;;
+    margin-left: 5px;
+
+}
+.textbox .txt > div > ul{
+    flex-direction: row-reverse;
+    display: flex;
+}
+.textbox .txt > div > ul li{
+    width:auto;
+}
+.textbox .txt > div > ul li a{
+}
+
+
+.textbox .txt > div > ul li:nth-of-type(1) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -150px -155px;
+    margin-left: 5px;
+}
+
+.textbox .txt > div > ul li:nth-of-type(2) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -100px -155px;
+    margin-left: 5px;
+}
+
+.textbox .txt > div > ul li:nth-of-type(3) a::after{
+    content: '';
+    display:inline-block;
+    width:25px; height:25px;
+    background: url(../img/ico_package.png);
+    background-position: -50px -155px;
+    margin-left: 5px;
+}
+
+.works{
+    width:90%; height:auto;
+    margin: 200px auto;
+    text-align: center;
+}
+.works h2{
+    color:#222222;
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+.works ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    justify-content: space-between;
+}
+.works ul li{
+    width:22%;
+    margin:50px 20px;
+    position: relative;
+}
+.works ul li a{}
+.works ul li a figure{
+    width:90%; 
+}
+.works ul li a figure img{}
+
+.works ul li:hover a p{
+    opacity: 1;
+}
+
+
+.works ul li a p{
+    position: absolute;
+    display: flex;
+    left: 0; top:0;
+    width:110%; height: 15vw;
+    background-color: #222222ac;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    opacity: 0; transition: 1s;
+    white-space: pre-line;
+}
+
+.more{width:100%; height:auto;}
+.more a{
+    margin: 100px auto;
+    width:182px; height: 70px;
+    padding-left: 30px;
+    border: 1px solid #66666659;
+    letter-spacing: 0.025rem;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.more a::after{
+    content: '';
+    padding-right:20px;
+    display: inline-block;
+    width:30px; height:30px;
+    background: url(../img/ico_package.png) -110px 0 / 200px no-repeat;
+    background-position: -80px 7px
+}
+
+
+.exhibit{
+    width:90%; height:auto;
+    margin: 200px auto;
+    text-align: center;
+}
+.exhibit h2{
+    color:#222222;
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+.exhibit ul{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.exhibit ul li{
+    width:100%;
+    margin: 0 30px;
+    text-align: left;
+}
+.exhibit ul li a{
+    width:100%;
+}
+.exhibit ul li a figure{
+    width:100%;
+}
+.exhibit ul li a figure img{
+    width:100%;
+}
+.exhibit ul li a figure h2{
+    color:#222222;
+    font-size: 1.3rem;
+    margin: 10px 0 ;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.exhibit ul li a figure p{
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.stories{
+    width:100%;
+    margin: 200px auto;
+    text-align: center;
+}
+.stories h2{
+    color:#222222;
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+.stories ul{}
+.stories ul li{
+    width:25%;
+    text-align: left;
+}
+.stories ul li a{}
+.stories ul li a figure{}
+.stories ul li a p:nth-of-type(1){
+    font-size: 0.9rem;
+}
+.stories ul li a p:nth-of-type(2){
+    font-size: 1.2rem;
+    color:#222222;
+    font-weight: 600;
+}
+
+
+
+/* =======================================================================================
+=======================================================================================
+======================================================================================= */
+@media(max-width:1023px){
+
+    .artistmain{
+        width:98%; height: auto;
+        margin:0 auto;
+        margin-bottom:100px;
+        position: relative;
+    }
+    
+    
+    .artistmain>figure{width:100%}
+    
+    .artistmain>figure>img{width:100%}
+
+    main{width:98%;}
+    main>.artinav{
+        text-align: center;
+    }
+    
+    main>.artinav>h1{
+        color:#222222;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        margin:40px 0;
+    }
+    main>.artinav>ul{
+        width:100%; height:5%;
+        margin:0 auto;
+        display: flex;
+        top:10%; left:50%;
+        justify-content: center;
+    }
+    main>.artinav>ul>li{
+        width:auto;
+    }
+    
+    main>.artinav>ul>li::before{
+        content: '';
+        display: inline-block;
+        width:1px; height: 10px;
+        background-color: #999;
+        margin:0 20px;
+    }
+    
+    main>.artinav>ul>li:nth-child(1):before{
+        content: '';
+        display: none;
+    }
+    
+    main>.artinav>ul>li>a{}
+    .textbox{width:98%;}
+    
+    .works{
+        width:98%; height:auto;
+        margin: 100px auto;
+        text-align: center;
+    }
+    .works h2{
+        color:#222222;
+        font-size: 1.9rem;
+        margin-bottom: 50px;
+        font-weight: bold;
+        letter-spacing: 0.075rem;
+    }
+    .works ul{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 auto;
+        justify-content: space-between;
+    }
+    .works ul li{
+        width:45%;
+        margin:10px 0;
+        position: relative;
+    }
+    .works ul li a{width:100%;}
+    .works ul li a figure{
+        width:100%; 
+    }
+    .works ul li a figure img{width:100%;}
+    
+    .works ul li:hover a p{
+        opacity: 1;
+    }
+
+    .works ul li a p {display:none;}
+    .more a{
+        margin: 50px auto;
+        width:182px; height: 70px;
+        padding-left: 30px;
+        border: 1px solid #66666659;
+        letter-spacing: 0.025rem;
+        background-color: none;
+        display: flex;
+        align-items: center;
+        font-size: 1em;
+        font-weight: 200;
+    }
+
+    .exhibit{
+        width:98%; height:auto;
+        margin: 100px auto;
+        text-align: center;
+    }
+    .exhibit h2{
+        color:#222222;
+        font-size: 1.9rem;
+        margin-bottom: 50px;
+        font-weight: 600;
+    }
+    .exhibit ul{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        
+    }
+    .exhibit ul li{
+        width:100%;
+        margin: 0 30px;
+        text-align: left;
+    }
+    .exhibit ul li a{
+        width:100%;
+    }
+    .exhibit ul li a figure{
+        width:100%;
+    }
+    .exhibit ul li a figure img{
+        width:100%;
+    }
+    .exhibit ul li a figure h2{
+        color:#222222;
+        font-size: 1.3rem;
+        margin: 10px 0 ;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+    }
+    
+    .exhibit ul li a figure p{
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .stories{
+        width:100%;
+        padding:0 2%;
+        margin: 100px auto;
+        text-align: center;
+    }
+    .stories h2{
+        color:#222222;
+        font-size: 1.9rem;
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+    .stories ul{width:100%;}
+    .stories ul li{
+        width:50%;
+        text-align: left;
+    }
+    .stories ul li a{width:100%;}
+    .stories ul li a figure{width:100%;}
+    .stories ul li a figure img{width:100%;}
+    .stories ul li a p:nth-of-type(1){
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+    .stories ul li a p:nth-of-type(2){
+        width:100%;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color:#222222;
+        font-weight: 500;
+    }
+    
+    .menunav{
+        padding:40px 0 ;
+        padding-bottom:10px;
+        position: sticky;
+        top:3%;
+        z-index: 20;
+        background-color: white;}
+}
+    
+
+
+/* =======================================================================================
+=======================================================================================
+======================================================================================= */
