@@ -1,0 +1,124 @@
+@import url(./common.css);
+
+main{
+    width:100%;
+    max-width: 1640px;
+    margin:200px auto;
+    padding:0 20px;
+}
+main>ul{
+    width:100%;
+    margin:30px auto;
+    display:flex;
+    justify-content: center;
+    
+}
+main>ul>li{
+    width:auto;
+}
+
+main>ul>li::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin-right:25px;
+    margin-left:25px;
+    background-color: #e5e5e5;
+}
+
+main>ul>li:nth-child(1):before{
+    content: '';
+    background:none;
+}
+
+main>ul>li>a{}
+main>ul>li:nth-child(1):hover{
+    font-weight: 600;
+}
+
+main>p{
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+    letter-spacing: 0.02rem;
+    line-height: 1.75;
+    font-weight: 400;
+    padding-top:0;
+}
+
+.fof{
+    margin:100px auto;
+}
+.fof a{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.fof a figure{
+    width:65%;
+}
+.fof a figure img{width:100%;}
+.fof a article{
+    width:30%;
+
+}
+.fof a article h3{
+    color:#333333;
+    font-size: 1.5rem;
+    letter-spacing: 0.025rem;
+    margin:30px 0 ;
+}
+.fof a article p{
+    color:#333333;
+    letter-spacing: 0.025rem;
+}
+.fof a article p::after{
+    content: '';
+    display:inline-block;
+    width:20px; height:20px;
+    margin: 0 0 0 10px;
+    background: url(../img/ico_package.png) 0 0 / 900% no-repeat;
+    background-position: -90px 8px;
+    color:black;
+}
+
+.fifty{
+    margin:20px auto;
+}
+.fifty a{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+.fifty a figure{
+    width:65%;
+}
+.fifty a figure img{
+    width:100%;
+}
+.fifty a article{
+    width:30%;
+    text-align: right;
+    margin-right:50px;
+}
+.fifty a article h3{
+    color:#333333;
+    font-size: 1.5rem;
+    letter-spacing: 0.025rem;
+    margin:30px 0 ;
+}
+.fifty a article p{
+    color:#333333;
+    letter-spacing: 0.025rem;
+}
+
+.fifty a article p::after{
+    content: '';
+    display:inline-block;
+    width:20px; height:20px;
+    margin: 0 0 0 10px;
+    background: url(../img/ico_package.png) 0 0 / 900% no-repeat;
+    background-position: -90px 8px;
+    color:black;
+}

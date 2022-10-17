@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <button class="menubtn"><span>메뉴</span></button>
+
+            <h1>
+                <a href="./index.html"><img src="./img/GALLERYHYUNDAI/logo.svg" alt="로고"></a>
+            </h1>
+            
+            <div class="headmenu">
+                <ul>
+                    <li><a href="./artists.html">Artists</a></li>
+                    <li><a href="./Exhibitions.html">Exhibitions</a></li>
+                    <li><a href="./stories.html">Stories</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./about.html">Gallery Hyundai</a></li>
+                    <li><a href="./fifthieth.html">50Years</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </div>
+
+            <button class="srchbtn"></button>
+
+            <div class="headsearch">
+                <form>
+                    <input type="search" name="search" placeholder="Search">
+                    <button></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const menubtn = document.querySelector('.menubtn');
+        const headmenuact = document.querySelector('.headmenu');
+
+        menubtn.onclick = function(){
+            menubtn.classList.toggle('active');
+            headmenuact.classList.toggle('active');
+        }
+    </script>
+
+
+    <main>
+        <div class="big">
+            <div>
+                <ul>
+                    <li>
+                        <a href="./matti.html">
+                            <figure><img src="./img/GALLERYHYUNDAI/main-mattibraun.png" alt="matti">
+                                <figcaption>
+                                    <span>Ku Sol</span>
+                                    <p>Matti Braun</p>
+                                    <p>September 21 - October 23, 2022</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" alt="">
+                            <figure><img src="./img/GALLERYHYUNDAI/main2.png" alt="lee kang-so">
+                                <figcaption>
+                                <span>Lee Kang-so</span>
+                                <p>Frieze Masters 2022</p>
+                                <p>Booth E1, October 12-16</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" alt="">
+                            <figure><img src="./img/GALLERYHYUNDAI/main3.png" alt="london">
+                                <figcaption>
+                                    <span></span>
+                                    <p>Frieze London</p>
+                                    <p>Booth B3, October 12-16</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bigdot">
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+
+        <ul class="mainstory"> 
+            <li><a href="#"><img src="./img/GALLERYHYUNDAI/submain1.jpg" alt="snail">
+                <article>
+                    <span>News</span>
+                    <h2>Lee Kun-Yong 이건용:Snail's Gallp</h2>
+                </article>
+            </a> </li>
+            <li><a href="#"><img src="./img/GALLERYHYUNDAI/submain2.jpg" alt="the man">
+                <article>
+                    <span>News</span>
+                    <h2>Kim Tschang-Yeul 김창열:The Man Who Paints Water Drops</h2>
+                </article>
+            </a> </li>
+            <li><a href="#"><img src="./img/GALLERYHYUNDAI/submain3.jpg" alt="seoul">
+                <article>
+                    <span>News</span>
+                    <h2>MOON Kyungwon & JEON Joonho 문경원 & 전준호:Seoul Weather Station</h2>
+                </article>
+            </a> </li>
+        </ul>
+
+        <div class="mainnews">
+            <a href="./storiessub1.html"><img src="img/GALLERYHYUNDAI/newsmain.jpg" alt="do hynung-teh"> 
+                <article>
+                    <span>News</span>
+                    <h2>Gallery Hyundai wants to bring Korea to the worlds, and vice versa</h2>
+                    <p>Cultural exchange has been the gallery's mission for 50 years, says president Do Hyung-Teh</p>
+                </article>
+            </a>
+        </div>
+
+        <ul class="subnews">
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news1.jpg" alt="cloud">
+                    <p>News</p>
+                    <p>Moon Kyungwon 문경원 : Cloud Walkers</p>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news2.jpg" alt="art worlds">
+                    <p>Video</p>
+                    <p>Park Hyunki 박현기 : Haeyun Park on Park Hyunki's art worlds</p>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news3.jpg" alt="traces">
+                    <p>Books</p>
+                    <p>Minjung Kim 김민정 : TRACES</p>
+                </a> 
+            </li>
+
+            
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news4.jpg" alt="interview">
+                    <p>Video</p>
+                    <p>Lee Ufan 이우환 : Interview</p>
+                    <span>Message from Lee Ufan</span>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news5.jpg" alt="unbound">
+                    <p>Books</p>
+                    <p>Seung-taek Lee 이승택:(Un)Bound</p>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news6.jpg" alt="books">
+                    <p>Books</p>
+                    <p>김환기 뉴욕시대와 한용진·문미애</p>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news7.jpg" alt="w magazine">
+                    <p>Press</p>
+                    <p>Seung-taek Lee 이승택:W magazine</p>
+                </a> 
+            </li>
+
+            <li>
+                <a href="#"> 
+                    <img src="./img/GALLERYHYUNDAI/news8.jpg" alt="plus magazine">
+                    <p>Press</p>
+                    <p>Kang Seung Lee:Plus magazine</p>
+                </a> 
+            </li>
+        </ul>
+
+        <div class="more">
+            <a href="#">
+                Load More
+            </a>
+        </div>
+        
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">INSTAGRAM</a></li>    
+            <li><a href="#">FACEBOOK</a></li>    
+            <li><a href="#">TWITTER</a></li>
+            <li><a href="#">YOUTUBE</a></li>    
+            <li><a href="#">NEWSLETTER</a></li>
+        </ul>
+        <div>
+            <P>14 Samcheong-ro,Jongno-gu,Seoul 03062 Korea</P>
+            <P>Gallery Hyundai-All rights reserved 2020</P>
+        </div>
+
+    </footer>
+</body>
+</html>
