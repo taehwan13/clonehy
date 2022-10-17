@@ -193,7 +193,7 @@ main{
 
 .bigdot{
     position: absolute;
-    bottom:3%; left:48%;
+    bottom:5%; left:48%;
 }
 .bigdot>button{
     width:3%; bottom:40px;
@@ -279,7 +279,7 @@ main{
             color:black;
             margin-top: 10px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.09em;
             
         }
@@ -339,7 +339,7 @@ main{
 .mainnews a article p{
     font-size: 1.125rem;
     margin:100px auto;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.025em;
     white-space: pre-line;
     max-width: 380px;
