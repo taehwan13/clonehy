@@ -435,7 +435,7 @@ main{
         }
         .mainnews a article p{
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.025em;
             white-space: pre-line;
             max-width: 380px;
