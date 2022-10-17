@@ -102,7 +102,7 @@ main{
         .big>div>ul li a figure figcaption{
             width:20%; height:auto;
             position: absolute;
-            left:2%; top:50%;
+            left:5%; bottom:7%;
             color:white;
         }
 
@@ -134,34 +134,6 @@ main{
             color:black;
         }
 
-        .bigdot{
-            position: absolute;
-            left:0%; top:68%;
-        }
-        .bigdot>button{
-            width:3%; 
-        }
-        .bigdot>button:nth-child(1){
-            position:absolute;
-            left:48.5%; 
-            width:1%; height:3px;
-            background-color: white;
-            border:none;
-        }
-        .bigdot>button:nth-child(2){
-            position:absolute;
-            left:50%; 
-            width:1%; height:3px;
-            background-color: white;
-            border:none;
-        }
-        .bigdot>button:nth-child(3){
-            position:absolute;
-            left:51.5%;
-            width:1%; height:3px;
-            background-color: white;
-            border:none;
-        }
         
     }
 
@@ -283,7 +255,11 @@ main{
             letter-spacing: 0.09em;
             
         }
-
+        .bigdot{
+            display:none;
+            position: absolute;
+            bottom:5%; left:48%;
+        }
 
     }
 
