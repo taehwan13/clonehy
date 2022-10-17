@@ -9,6 +9,7 @@ main{
 .big{
     width:100%; height:auto;
     margin:0;
+    position: relative;
 }
 
 .big>div{
@@ -21,16 +22,17 @@ main{
 
 .big>div>ul li a{width:100%;}
 
-.big>div>ul li a figure{width:100%;}
+.big>div>ul li a figure{width:100%;
+}
 
 .big>div>ul li a figure img{width:100%;
-    position: relative;
+    
 }
 
 .big>div>ul li a figure figcaption{
     width:20%; height:auto;
     position: absolute;
-    left:10%; bottom:7%;
+    left:5%; bottom:7%;
     color:white;
 }
 
@@ -75,6 +77,7 @@ main{
         .big{
             width:100%; height:auto;
             margin:0;
+            position: relative;
         }
         
         .big>div{
@@ -87,10 +90,13 @@ main{
         
         .big>div>ul li a{width:100%;}
         
-        .big>div>ul li a figure{width:100%;}
+        .big>div>ul li a figure{
+            width:100%;
+            
+        }
         
         .big>div>ul li a figure img{width:100%;
-            position: relative;
+            
         }
         
         .big>div>ul li a figure figcaption{
@@ -186,27 +192,28 @@ main{
 
 
 .bigdot{
-    
+    position: absolute;
+    bottom:3%; left:48%;
 }
 .bigdot>button{
     width:3%; bottom:40px;
 }
 .bigdot>button:nth-child(1){
-    position:absolute;
+    
     left:48.5%; 
     width:1%; height:3px;
     background-color: white;
     border:none;
 }
 .bigdot>button:nth-child(2){
-    position:absolute;
+    
     left:50%; 
     width:1%; height:3px;
     background-color: white;
     border:none;
 }
 .bigdot>button:nth-child(3){
-    position:absolute;
+    
     left:51.5%;
     width:1%; height:3px;
     background-color: white;
@@ -238,7 +245,7 @@ main{
     color:black;
     margin-top: 10px;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.05em;
 }
 
@@ -361,7 +368,7 @@ main{
     margin-top: 20px;
     margin-bottom:10px;
     font-size: 1.2rem;
-    font-weight: 580;
+    font-weight: 400;
     letter-spacing: 0.1em;
     flex-shrink: 0;
     overflow:hidden;
@@ -460,7 +467,7 @@ main{
             margin-top: 10px;
             margin-bottom:10px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.075em;
             flex-shrink: 0;
             overflow:hidden;
