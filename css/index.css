@@ -10,6 +10,7 @@ main{
     width:100%; height:auto;
     margin:0;
     position: relative;
+    max-width: 1640px;
 }
 
 .big>div{
@@ -165,7 +166,8 @@ main{
 
 .bigdot{
     position: absolute;
-    bottom:5%; left:48%;
+    bottom:5%; left:0%;
+    text-align: center;
 }
 .bigdot>button{
     width:3%; bottom:40px;
