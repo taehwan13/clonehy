@@ -13,6 +13,10 @@
     src: url(../fonts/AvenirLTStd-Medium.woff2);
 }
 @font-face {
+    font-family: AvenirLTStd-Light;
+    src: url(../fonts/AvenirLTStd-Light.woff2);
+}
+@font-face {
     font-family: arno;
     src: url(../fonts/ArnoPro-Regular.woff2);
 }
