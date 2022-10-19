@@ -28,7 +28,14 @@ main{
     margin-left:20px;
 }
 
-.artinav ul li a{}
+.artinav ul li button{
+    border:none;
+    background: none;
+    font-size: 1rem;
+    color:#999999;
+}
+
+.artinav .a-btn li.active button{color:#222222;}
 
 .artinav ul li:nth-child(1):before{
     content: '';
@@ -39,8 +46,10 @@ main{
 .obj{
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     width:70%; height:auto;
     margin: 100px auto;
+    min-height: 580px;
 }
 
 .obj .artlist{
@@ -48,23 +57,28 @@ main{
 
 }
 
-.obj .artlist .artists{
+.obj .artlist ul{
     font-size: 1.1em;
     font-weight: 400;
-    display:flex;
+    display:none;
     flex-wrap: wrap;
 
 }
 
-.obj .artlist .artists li{
-    font-weight: 700;
-    width:50%;
+.obj .artlist ul li{
+    font-weight: 500;
     margin-top: 10px;
 }
+.art-artists{display:flex;}
 
-.obj .artlist .artists li a{}
+.obj .artlist ul.active {
+    display:flex;
+    flex-direction: column;
+}
 
-.obj .artlist .artists li:nth-of-type(2) a{text-decoration: underline;}
+.obj .artlist ul:nth-child(1).active li:nth-of-type(2) a{text-decoration: underline;}
+
+
 
 /* ================================================================================================
 ================================================================================================

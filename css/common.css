@@ -375,17 +375,18 @@ footer{
 footer ul{
     max-width: 1640px;
     margin: 50px;
-    width:50%;
+    
     display: flex;
     justify-content: center;
     }
 
 footer ul li{
-    width:15%; height:30px;
+
     font-size: 0.75em;
     color:#222222;
     text-align: top;
     display: inline-block;
+    margin:0 5px;
 
 }
 
@@ -412,11 +413,11 @@ footer ul li:nth-child(2) a:before{
 }
 
 footer ul li:nth-child(3) a:before{
-    background-position: -100px -52px;
+    background-position: -102px -52px;
 }
 
 footer ul li:nth-child(4) a:before{
-    background-position: -160px -52px;
+    background-position: -158px -52px;
 }
 
 footer ul li:nth-child(5) a:before{

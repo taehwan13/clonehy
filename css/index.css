@@ -30,6 +30,24 @@ main{
     
 }
 
+
+.big>div>ul>li:nth-child(1){width:100%; }
+.big>div>ul>li:nth-child(2){width:100%; display:none;}
+.big>div>ul>li:nth-child(3){width:100%; display:none;}
+
+/* .big>div>ul>li:nth-child(1).active0 {width:100%; }
+.big>div>ul>li:nth-child(2).active0 {width:100%; display:none;}
+.big>div>ul>li:nth-child(3).active0 {width:100%; display:none;}  */
+/* 
+.big>div>ul>li:nth-child(1).active1 {width:100%; display:none;}
+.big>div>ul>li:nth-child(2).active1 {width:100%; }
+.big>div>ul>li:nth-child(3).active1 {width:100%; display:none;} 
+
+.big>div>ul>li:nth-child(1).active2 {width:100%; display:none;}
+.big>div>ul>li:nth-child(2).active2 {width:100%; display:none;}
+.big>div>ul>li:nth-child(3).active2 {width:100%; } 
+ */
+
 .big>div>ul li a figure figcaption{
     width:20%; height:auto;
     position: absolute;
@@ -141,9 +159,8 @@ main{
 /* ============================================================================================
 ============================================================================================
 ============================================================================================ */
-.big>div>ul>li:nth-child(1){width:100%; }
-.big>div>ul>li:nth-child(2){width:100%; display:none;}
-.big>div>ul>li:nth-child(3){width:100%; display:none;}
+
+
 
 .bigdot{
     position: absolute;
