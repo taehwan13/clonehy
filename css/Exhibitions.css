@@ -20,7 +20,7 @@ main{
 .exhibitionsnav ul li{
     width:auto;
 }
-.exhibitionsnav ul li a{
+.exhibitionsnav ul li a:hover{color:#222222;
 }
 
 .exhibitionsnav ul li::before{
@@ -32,7 +32,7 @@ main{
     margin-left:25px;
     background-color: #e5e5e5;
 }
-
+.exhibitionsnav ul li:nth-child(1){font-weight: bold;}
 .exhibitionsnav ul li:nth-child(1)::before{
     content: '';
     background:none;

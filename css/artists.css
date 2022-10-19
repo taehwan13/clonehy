@@ -35,7 +35,12 @@ main{
     color:#999999;
 }
 
-.artinav .a-btn li.active button{color:#222222;}
+.artinav ul li button:hover{
+    color:#222222;
+    cursor: pointer;
+}
+.artinav .a-btn li.active button{
+    color:#222222;font-weight: 700;}
 
 .artinav ul li:nth-child(1):before{
     content: '';
