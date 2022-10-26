@@ -52,13 +52,15 @@ main{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width:70%; height:auto;
+    width:100%; height:auto;
     margin: 100px auto;
     min-height: 580px;
+    padding: 0 10%;
 }
 
 .obj .artlist{
     display:flex;
+    width:50%;
 
 }
 
@@ -83,7 +85,10 @@ main{
 
 .obj .artlist ul:nth-child(1).active li:nth-of-type(2) a{text-decoration: underline;}
 
-
+.art-hover{width:40%;}
+.art-hover figure{width:100%;}
+.art-hover figure img{display:none; width:100%;}
+.art-hover.active figure img{display:block; width:100%; margin:0;}
 
 /* ================================================================================================
 ================================================================================================

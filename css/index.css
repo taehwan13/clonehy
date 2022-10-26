@@ -1,16 +1,18 @@
 @import url('./common.css');
 
 main{   
-    width: 100%; min-height: auto;
+    width: 100%;
     max-width: 1640px;
     margin:5% auto;
     }
 
 .big{
-    width:100%; height:auto;
+    width:100%;
     margin:0;
     position: relative;
     max-width: 1640px;
+    min-height: 900px;
+    
 }
 
 .big>div{
@@ -19,7 +21,10 @@ main{
 
 .big>div>ul{width:100%;}
 
-.big>div>ul li{width:100%;}
+.big>div>ul li{width:100%; 
+    position: absolute;
+    top:10%; left:0;
+}
 
 .big>div>ul li a{width:100%;}
 
@@ -32,21 +37,9 @@ main{
 
 
 .big>div>ul>li:nth-child(1){width:100%; }
-.big>div>ul>li:nth-child(2){width:100%; display:none;}
-.big>div>ul>li:nth-child(3){width:100%; display:none;}
+.big>div>ul>li:nth-child(2){width:100%;}
+.big>div>ul>li:nth-child(3){width:100%;}
 
-/* .big>div>ul>li:nth-child(1).active0 {width:100%; }
-.big>div>ul>li:nth-child(2).active0 {width:100%; display:none;}
-.big>div>ul>li:nth-child(3).active0 {width:100%; display:none;}  */
-/* 
-.big>div>ul>li:nth-child(1).active1 {width:100%; display:none;}
-.big>div>ul>li:nth-child(2).active1 {width:100%; }
-.big>div>ul>li:nth-child(3).active1 {width:100%; display:none;} 
-
-.big>div>ul>li:nth-child(1).active2 {width:100%; display:none;}
-.big>div>ul>li:nth-child(2).active2 {width:100%; display:none;}
-.big>div>ul>li:nth-child(3).active2 {width:100%; } 
- */
 
 .big>div>ul li a figure figcaption{
     width:20%; height:auto;
@@ -94,9 +87,10 @@ main{
             }
         
         .big{
-            width:100%; height:auto;
+            width:100%; 
             margin:0;
             position: relative;
+            min-height: 600px;
         }
         
         .big>div{
@@ -153,44 +147,21 @@ main{
             color:black;
         }
 
+        @media(max-width:424px){
+            .big{
+                width:100%; 
+                margin:0;
+                position: relative;
+                min-height: 200px;
+            }
+        }
+    
         
     }
 
 /* ============================================================================================
 ============================================================================================
 ============================================================================================ */
-
-
-
-.bigdot{
-    position: absolute;
-    bottom:5%; left:0%;
-    text-align: center;
-}
-.bigdot>button{
-    width:3%; bottom:40px;
-}
-.bigdot>button:nth-child(1){
-    
-    left:48.5%; 
-    width:1%; height:3px;
-    background-color: white;
-    border:none;
-}
-.bigdot>button:nth-child(2){
-    
-    left:50%; 
-    width:1%; height:3px;
-    background-color: white;
-    border:none;
-}
-.bigdot>button:nth-child(3){
-    
-    left:51.5%;
-    width:1%; height:3px;
-    background-color: white;
-    border:none;
-}
 
 
 .mainstory{

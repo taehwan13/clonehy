@@ -18,6 +18,8 @@
     <meta property="twitter:url"           content="https://taehwan13.github.io/clonehy/" />    <title>Document</title>
     <link href="./css/index.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -36,17 +38,16 @@
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./about.html">Gallery Hyundai</a></li>
                     <li><a href="./fifthieth.html">50Years</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li class="headSrchBtn"><a href="#">Search</a></li>
                 </ul>
             </div>
 
-            <button class="srchbtn"></button>
-
             <div class="headsearch">
                 <form>
-                    <input type="search" name="search" placeholder="Search">
+                    <input type="text" name="search" placeholder="Search">
                     <button></button>
                 </form>
+                <button class="closeBtn"></button>
             </div>
         </div>
     </header>
@@ -54,11 +55,27 @@
     <script>
         const menubtn = document.querySelector('.menubtn');
         const headmenuact = document.querySelector('.headmenu');
+        const headSrchBtn = document.querySelector('.headSrchBtn');
+        const headSearch = document.querySelector('.headsearch');
+        const closeBtn = document.querySelector('.closeBtn');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
             headmenuact.classList.toggle('active');
         }
+
+        headSrchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
+
+        closeBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
+
     </script>
 
 
@@ -66,6 +83,7 @@
         <div class="big">
             <div class="mainjpg">
                 <ul>
+                    
                     <li>
                         <a href="./matti.html">
                             <figure><img src="./img/GALLERYHYUNDAI/main1.png" alt="matti">
@@ -79,7 +97,7 @@
                     </li>
 
                     <li>
-                        <a href="#" alt="">
+                        <a href="#">
                             <figure><img src="./img/GALLERYHYUNDAI/main2.png" alt="lee kang-so">
                                 <figcaption>
                                 <span>Lee Kang-so</span>
@@ -91,7 +109,7 @@
                     </li>
 
                     <li>
-                        <a href="#" alt="">
+                        <a href="#">
                             <figure><img src="./img/GALLERYHYUNDAI/main3.png" alt="london">
                                 <figcaption>
                                     <span></span>
@@ -103,12 +121,27 @@
                     </li>
                 </ul>
             </div>
-        
-            <div class="bigdot">
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
+        <!-- ==================================================================================
+        ==================================================================================
+        ================================================================================== -->
+            <script>
+                const mainJpg = document.querySelectorAll('.mainjpg ul li');
+                let mainNum = 0, mainInter, mainJpgFun;
+                $('.mainjpg ul li').not(":first").hide();
+
+                mainJpgFun = function(){
+                    mainInter = setInterval(function(){
+                    $('.mainjpg ul li').eq(mainNum).fadeOut(1000);
+                    (mainNum < mainJpg.length-1)? mainNum ++ : mainNum = 0;
+                    $('.mainjpg ul li').eq(mainNum).fadeIn(1000);
+                },4000)
+                }
+
+                mainJpgFun();
+            </script>
+        <!-- ==================================================================================
+        ==================================================================================
+        ================================================================================== -->
         </div>
 
         <ul class="mainstory"> 

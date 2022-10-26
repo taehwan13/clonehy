@@ -94,41 +94,92 @@ header>div>.headmenu>ul>li>a{
     color:#333333;
     letter-spacing: 0.005em;
 }
+.headSrchBtn.active>a{
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
 
 header>div>.headsearch{
     margin:85px auto;
     width:100%; height:200px;
     background-color: white;
     position: absolute;
+    left:0; top:2%;
     text-align: center;
     display:none;
-    opacity: 0;
 }
+
+
+header>div>.headsearch.active{display:block;}
 
 header>div>.headsearch>form{
     text-align: left;
-    padding-left: 600px;
-    padding-top: 50px;
+    width:40%; 
+    display:flex;
+    justify-content: space-between;
+    text-align: right;
+    margin: 100px auto;
+    border-bottom:1px solid rgba(0, 0, 0, 0.39);
+}
+
+header>div>.headsearch>form>input{
+    width:70%;
+    display:inline;
 }
 
 header>div>.headsearch>form>button{
     border:none;
+    display:inline;
+    background-color: white;
+}
+
+header>div>.headsearch>form>button:hover{
+    cursor: pointer;
 }
 
 header>div>.headsearch>form>button::before{
     content:'';
     display: inline-block;
     width:40px; height:40px;
-    background-color: white;
-    background: url(../img/ico_package.png) 0 0 / 600% no-repeat;
+    background: url(../img/ico_package_2x.png) 0 0 / 600% no-repeat;
     background-position: 0 2px;
 }
 
 header>div>.headsearch>form>input{
     border:none;
-    font-size: 2em;
-    border-bottom:1px solid black;}
+    font-size: 1.5em;
+    outline: none;
+    }
 
+.headsearch>.closeBtn{
+    width:25px; height:25px;
+    position: absolute;
+    top:20%; right:10%;
+    margin:1px;
+    border:none;
+    background: transparent;
+    display:none;
+}
+.headsearch>.closeBtn:hover{cursor: pointer;}
+
+.headsearch>.closeBtn.active{display:block;}
+
+.headsearch>.closeBtn::before{
+    content: '';
+    position: absolute;
+    right: 0; top:0%; 
+    width:100%; height:2px;
+    background-color: #000;
+    transform:rotate(-135deg);
+}
+.headsearch>.closeBtn::after{
+    content: '';
+    position: absolute;
+    right: 0; top:0%;
+    width:100%; height:2px;
+    background-color: #000;
+    transform:rotate(135deg);
+}
 /* =============================================================================
 =============================================================================
 ============================================================================= */
@@ -158,6 +209,8 @@ header>div>.headsearch>form>input{
         display:block;
         border:none;
     }
+
+
     header>div>.menubtn>span{
         position: absolute;
         left: 0; top:50%;
@@ -320,7 +373,7 @@ header>div>.headsearch>form>input{
         font-size: 1.1rem;
         margin:0 auto; margin-top:20px;
     }
-    header>div>.headmenu>ul>li:nth-of-type(7){display:none;}
+
     header>div>.headmenu>ul>li>a{
         color:#333333;
         margin:0 auto;

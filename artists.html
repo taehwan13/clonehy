@@ -38,17 +38,16 @@
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./about.html">Gallery Hyundai</a></li>
                     <li><a href="./fifthieth.html">50Years</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li class="headSrchBtn"><a href="#">Search</a></li>
                 </ul>
             </div>
 
-            <button class="srchbtn"></button>
-
             <div class="headsearch">
                 <form>
-                    <input type="search" name="search" placeholder="Search">
+                    <input type="text" name="search" placeholder="Search">
                     <button></button>
                 </form>
+                <button class="closeBtn"></button>
             </div>
         </div>
     </header>
@@ -56,11 +55,27 @@
     <script>
         const menubtn = document.querySelector('.menubtn');
         const headmenuact = document.querySelector('.headmenu');
+        const headSrchBtn = document.querySelector('.headSrchBtn');
+        const headSearch = document.querySelector('.headsearch');
+        const closeBtn = document.querySelector('.closeBtn');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
             headmenuact.classList.toggle('active');
         }
+
+        headSrchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
+
+        closeBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
+
     </script>
 
     <main>
@@ -76,7 +91,7 @@
         <div class="obj">
             <div class="artlist">
                 <ul class="art-artists active">
-                    <li><a href="#">Ayoung Kim</a>
+<!--                     <li><a href="#">Ayoung Kim</a>
                     </li>
                     <li><a href="./martin.html">Micheal Craig-Martin</a>
                     </li>
@@ -119,10 +134,10 @@
                     <li><a href="#">Seung-taek Lee</a>
                     </li>
                     <li><a href="#">Yang Jung Uk</a>
-                    </li>
+                    </li> -->
                 </ul>
 
-                <ul class="art-korean">
+ <!--                <ul class="art-korean">
                     <li><a href="#">Chang Ucchin</a>
                     </li>
                     <li><a href="#">Lee Jung Seob</a>
@@ -225,16 +240,21 @@
                     </li>
                     <li><a href="#">Yoo Youngkuk</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
-            <div class="art">
-                <img src="./img/GALLERYHYUNDAI/AyoungKim-GALLERYHYUNDAI/d47e1de4-c495-4189-8a4d-ff2190a01e71.crop_small.jpg" alt="김아영">
+            <div class="art-hover">
+                <figure>
+                    <!-- <img src="./img/GALLERYHYUNDAI/Artists/1.jpg" alt="김아영"> -->
+                </figure>
             </div>
         </div>
 
         <script>
             const aBtn = document.querySelectorAll('.a-btn li');
-            const aList = document.querySelectorAll('.obj .artlist ul');
+            const aList = document.querySelector('.obj .artlist ul');
+            const artJpg = document.querySelector('.art-hover figure');
+            
+
             let i = 0;
             aBtn.forEach(function(btn,key){
                 btn.addEventListener('click',function(){
@@ -246,6 +266,113 @@
                     i=key;
                 })
             });
+
+            const art_List = document.querySelector('.art-all');
+                let elList = '';
+                let dataList = {
+                        "Artists" : {
+                            "Ayoung Kim":"1.jpg",
+                            "Micheal Craig-Martin":"2.jpg",
+                            "Choi Minhwa":"3.jpg",
+                            "Chung Sang-Hwa":"4.jpg",
+                            "Chung Zuyoung":"5.jpg",
+                            "Fred Sandback":"6.jpg",
+                            "Ik-Joong Kang":"7.jpg",
+                            "Iván Navarro":"8.jpg",
+                            "Jeon Joonho":"9.jpg",
+                            "Kang Seung Lee":"10.jpg",
+                            "Kim Tschang-Yeul Estate":"11.jpg",
+                            "Lee Kang-So":"12.jpg",
+                            "Lee Ufan":"13.jpg",
+                            "Minjung Kim":"14.jpg",
+                            "Moon Kyungwon":"15.jpg",
+                            "Moon Kyungwon & Jeon Joonho":"16.jpg",
+                            "Park Hyunki Estate":"17.jpg",
+                            "Robert Indiana":"18.jpg",
+                            "Sabine Moritz":"19.jpg",
+                            "Seulgi Lee":"20.jpg",
+                            "Seung-taek Lee":"21.jpg",
+                            "Yang Jung Uk":"22.jpg"
+                        },
+                        "Korean Modern Masters" : {
+                            "Chang Ucchin":"23.jpg",
+                            "Lee Jung Seob":"24.jpg",
+                            "Chun Kyungja":"25.jpg",
+                            "Han Mook":"26.jpg",
+                            "Lee Dai-won":"27.jpg",
+                            "Oh Chi HO":"28.jpg",
+                            "To SangBong":"29.jpg"
+                        },
+
+                        "Works By" : {
+                            "Choong Sup Lim":"30.jpg",
+                            "Chung Changsup":"31.jpg",
+                            "François Morellet":"32.jpg",
+                            "Nam June Paik":"33.jpg",
+                            "Park Seo-Bo":"34.jpg",
+                            "Yoo Youngkuk":"35.jpg"
+                        },
+
+                        "All" : {
+                            "Ayoung Kim":"1.jpg",
+                            "Micheal Craig-Martin":"2.jpg",
+                            "Choi Minhwa":"3.jpg",
+                            "Chung Sang-Hwa":"4.jpg",
+                            "Chung Zuyoung":"5.jpg",
+                            "Fred Sandback":"6.jpg",
+                            "Ik-Joong Kang":"7.jpg",
+                            "Iván Navarro":"8.jpg",
+                            "Jeon Joonho":"9.jpg",
+                            "Kang Seung Lee":"10.jpg",
+                            "Kim Tschang-Yeul Estate":"11.jpg",
+                            "Lee Kang-So":"12.jpg",
+                            "Lee Ufan":"13.jpg",
+                            "Minjung Kim":"14.jpg",
+                            "Moon Kyungwon":"15.jpg",
+                            "Moon Kyungwon & Jeon Joonho":"16.jpg",
+                            "Park Hyunki Estate":"17.jpg",
+                            "Robert Indiana":"18.jpg",
+                            "Sabine Moritz":"19.jpg",
+                            "Seulgi Lee":"20.jpg",
+                            "Seung-taek Lee":"21.jpg",
+                            "Yang Jung Uk":"22.jpg",
+                            "Chang Ucchin":"23.jpg",
+                            "Lee Jung Seob":"24.jpg",
+                            "Chun Kyungja":"25.jpg",
+                            "Han Mook":"26.jpg",
+                            "Lee Dai-won":"27.jpg",
+                            "Oh Chi HO":"28.jpg",
+                            "To SangBong":"29.jpg",
+                            "Choong Sup Lim":"30.jpg",
+                            "Chung Changsup":"31.jpg",
+                            "François Morellet":"32.jpg",
+                            "Nam June Paik":"33.jpg",
+                            "Park Seo-Bo":"34.jpg",
+                            "Yoo Youngkuk":"35.jpg"
+                        },
+                };
+
+                console.log(   dataList["Works By"]["Choong Sup Lim"]);
+
+                console.log( Object.keys(dataList)[1]  );
+
+                let artLi ='';
+                for(let key in dataList['Artists']){
+                    //console.log(`${dataList['Artists'][key]}`);
+                    artLi += `<li><a href="#">${key}</a></li>`;
+                    console.log(`<li><a href="#">${key}</a></li>`)
+                }
+                aList.innerHTML = artLi;
+                
+
+
+                
+
+
+                
+                
+                
+        
         </script>
 
 

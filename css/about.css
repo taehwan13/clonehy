@@ -187,6 +187,7 @@ main>div{
     .leftbox>ul{width:100%;}
     .leftbox>ul li{width:100%;
         margin:10px 0;
+        overflow: hidden;
     }
     .leftbox>ul li figure{width:100%;
         margin-bottom: 10px;
@@ -202,6 +203,7 @@ main>div{
     .leftbox>ul li table tbody tr{}
     .leftbox>ul li table tbody tr td{
         font-size: 0.9rem;
+        
     }
     .leftbox>ul li table tbody tr td:nth-child(1){
         font-weight: bold;
