@@ -195,7 +195,7 @@ header>div>.headsearch>form>input{
     }
     header>div{
         padding: 0 10px;}
-
+    header>div>.headmenu{padding-left: 0;}
     header>div>h1{padding:20px 0;}
     header>div>.headmenu>ul>li:nth-of-type(7){display:none;}
     header>div>.menubtn{
