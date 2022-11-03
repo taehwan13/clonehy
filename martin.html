@@ -19,6 +19,7 @@
     <meta property="twitter:url"           content="https://taehwan13.github.io/clonehy/" />    <title>Document</title>
     <link href="./css/martin.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <script defer src="./js/matti.js"></script>
 </head>
 <body>
     <header>
@@ -41,6 +42,7 @@
                 </ul>
             </div>
 
+            <div class="srchbtn"><button></button></div>
             <div class="headsearch">
                 <form>
                     <input type="text" name="search" placeholder="Search">
@@ -57,6 +59,7 @@
         const headSrchBtn = document.querySelector('.headSrchBtn');
         const headSearch = document.querySelector('.headsearch');
         const closeBtn = document.querySelector('.closeBtn');
+        const searchBtn = document.querySelector('.srchbtn > button');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
@@ -69,6 +72,11 @@
             closeBtn.classList.toggle('active');
         })
 
+        searchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
         closeBtn.addEventListener('click',function(){
             headSrchBtn.classList.toggle('active');
             headSearch.classList.toggle('active');
@@ -77,61 +85,58 @@
 
     </script>
     <main>
-        <div class="artistmain">
+        <div class="mainimg">
             <figure >
-                <img src="./img/GALLERYHYUNDAI/Artists_KoreanModernMasters_WorksByG/5fbc1e58-e518-400f-8ffe-429ac9b1bc3a.resize_large.jpg" alt="martin main">
+                <img src="./img/GALLERYHYUNDAI/5fbc1e58-e518-400f-8ffe-429ac9b1bc3a.resize_large.jpg" alt="martin main">
             </figure>
         </div>
 
         <section class="artinav">
-            <h1>MICHAEL CRAIG-MARTIN</h1>
-            <div class="menunav">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Selected Works</a></li>
-                    <li><a href="#">Installation Views</a></li>
-                    <li><a href="#">Stories</a></li>
-                </ul>
-            </div>
-
-            <div class="textbox">
-                <div class="info">
-                        <img src="./img/GALLERYHYUNDAI/MichaelCraig-Martin-GALLERYHYUNDAI/MichaelCraig-Martin.jpg" alt="martininfo">
-                        <div>
-                            <article>
-                                <h3>Download</h3>
-                                <ul>
-                                <li><a href="#">CV</a></li>
-                                </ul>
-                            </article>
-                            <article>
-                                <h3>Connect</h3>
-                                <ul>
-                                <li><a href="#">Website</a></li>
-                                <li><a href="#">Further Information</a></li>
-                                </ul>
-                            </article>
-                        </div>
-                    
+            <h2>MICHAEL CRAIG-MARTIN</h2>
+                <div class="menunav">
+                    <ul>
+                        <li><button>About</button></li>
+                        <li><button>Selected Works</button></li>
+                        <li><button>Exhibitions</button></li>
+                        <li><button>Stories</button></li>
+                    </ul>
                 </div>
-                <div class="txt">
-                    <!-- <p>*한국어 안내는 하단의 'Read More'를 클릭하세요.</p> -->
-                    <p>Michael Craig-Martin (b. 1941) is acknowledged leader of British conceptual art and began his career by exploring the transition of daily objects and ability to perceive as his central theme. During the late 1960s and early 1970s, his works were made with objects that people can easily encounter in their everyday life as he questioned the boundary between mundane objects and art. In the late 1970s, Craig-Martin began to make line drawings of ordinary everyday objects with black tape characterized by their boldly outlined motifs. While he started with a conceptual approach to this question, his explorations touched on different realms of artistic language such as drawing, painting, and sculpture. </p>
-                    <p>Entering the 1990s, Craig-Martin’s focus shifted decisively to painting, rendering unexpected combinations in both works on canvas and complex wall paintings. Craig-Martin’s unique picture, juxtaposing simplified form with unfamiliar combination of common objects, decomposed the traditional language of painting and suggested the possibility of looking at art from a new angle. With the use of simplified images, his works allow viewers to ponder the meaning of art in a less serious manner allowing room for creativity and interaction.</p>
-                    <p>Craig-Martin’s works are in numerous collections including, among others, MoMA, Tate London, Centre Pompidou and Museo Nacional Centro de Arte Reina Sofía.</p>
-                    <p>설치미술가이자 화가인 마이클 크레이그 마틴은 아일랜드에서 태어났으나 미국에서 자라고 교육 받았다. 그는 예일 대학에서 미술학위를 받은 후, 1996년 영국으로 이주했으며, 이후 1980년대와 1990년대 영국의 젊은 미술가들 사이에서 영향력 있는 인물 중 하나로 자리잡으며 ‘젊은 영국 예술가들의 대부’로 불렸다. 그의 초기 작품들은 제스퍼 존스나 도널드 저드의 작품과 연관성을 보였으며, 가정에서 일상적으로 사용되는 ‘발견된’ 오브제를 조각 작품에 사용, 미니멀아트로부터 영향받았음을 보여줬다. 그는 이후 재현과 리얼리티의 문제를 탐구하는 데 주력했다. 밝고 선명한 색 대신에 일상적인 오브제들을 다룸으로 크레이그 마틴은 이미지와 선, 단어, 색채 사이의 밀접한 관계를 만들어냈다. 크레이그 마틴의 가장 유명한 작품은 높은 선반 위에 놓인 평범한 물컵이 어째서 참나무인지를 기호학적으로 보여준 참나무(1973)로, 대상 그 자체보다 미술가의 의도가 중요함을 선언한 이 작품은 작가의 작품 세계뿐만 아니라 개념미술 운동에서도 중요한 전환점이 되었다.</p>
+                <div class="textbox">
+                    <div class="info">
+                        <img src="./img/GALLERYHYUNDAI/MichaelCraig-Martin-GALLERYHYUNDAI/MichaelCraig-Martin.jpg" alt="martininfo">
+                        <article>
+                            <h3>Download</h3>
+                            <ul>
+                            <li><a href="#">CV</a></li>
+                            </ul>
+                    </article>
+        
                     <div>
-                        <a href="#">Read More</a>
+                        <h3>Connect</h3>
                         <ul>
-                            <li><a href="#" alt="뉴스레터"></a></li>
-                            <li><a href="#" alt="트위터"></a></li>
-                            <li><a href="#" alt="페이스북"></a></li>
-                            <li>Share</li>
+                            <li><a href="#">Website</a></li>
+                            <li><a href="#">Further Information</a></li>
                         </ul>
                     </div>
+                    </div>
+                    <div class="txt">
+                        <!-- <p>*한국어 안내는 하단의 'Read More'를 클릭하세요.</p> -->
+                        <p>Michael Craig-Martin (b. 1941) is acknowledged leader of British conceptual art and began his career by exploring the transition of daily objects and ability to perceive as his central theme. During the late 1960s and early 1970s, his works were made with objects that people can easily encounter in their everyday life as he questioned the boundary between mundane objects and art. In the late 1970s, Craig-Martin began to make line drawings of ordinary everyday objects with black tape characterized by their boldly outlined motifs. While he started with a conceptual approach to this question, his explorations touched on different realms of artistic language such as drawing, painting, and sculpture. </p>
+                        <p>Entering the 1990s, Craig-Martin’s focus shifted decisively to painting, rendering unexpected combinations in both works on canvas and complex wall paintings. Craig-Martin’s unique picture, juxtaposing simplified form with unfamiliar combination of common objects, decomposed the traditional language of painting and suggested the possibility of looking at art from a new angle. With the use of simplified images, his works allow viewers to ponder the meaning of art in a less serious manner allowing room for creativity and interaction.</p>
+                        <p>Craig-Martin’s works are in numerous collections including, among others, MoMA, Tate London, Centre Pompidou and Museo Nacional Centro de Arte Reina Sofía.</p>
+                        <p>설치미술가이자 화가인 마이클 크레이그 마틴은 아일랜드에서 태어났으나 미국에서 자라고 교육 받았다. 그는 예일 대학에서 미술학위를 받은 후, 1996년 영국으로 이주했으며, 이후 1980년대와 1990년대 영국의 젊은 미술가들 사이에서 영향력 있는 인물 중 하나로 자리잡으며 ‘젊은 영국 예술가들의 대부’로 불렸다. 그의 초기 작품들은 제스퍼 존스나 도널드 저드의 작품과 연관성을 보였으며, 가정에서 일상적으로 사용되는 ‘발견된’ 오브제를 조각 작품에 사용, 미니멀아트로부터 영향받았음을 보여줬다. 그는 이후 재현과 리얼리티의 문제를 탐구하는 데 주력했다. 밝고 선명한 색 대신에 일상적인 오브제들을 다룸으로 크레이그 마틴은 이미지와 선, 단어, 색채 사이의 밀접한 관계를 만들어냈다. 크레이그 마틴의 가장 유명한 작품은 높은 선반 위에 놓인 평범한 물컵이 어째서 참나무인지를 기호학적으로 보여준 참나무(1973)로, 대상 그 자체보다 미술가의 의도가 중요함을 선언한 이 작품은 작가의 작품 세계뿐만 아니라 개념미술 운동에서도 중요한 전환점이 되었다.</p>
+                        <div>
+                            <a href="#">Read More</a>
+                            <ul>
+                                <li><a href="#" alt="뉴스레터"></a></li>
+                                <li><a href="#" alt="트위터"></a></li>
+                                <li><a href="#" alt="페이스북"></a></li>
+                                <li>Share</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
+
             <article class="works">
                 <h2>  Selected Works          </h2>
                 <ul>
@@ -225,7 +230,7 @@
     
     
     
-            <article class="exhibit">
+            <article class="insviews">
                 <h2>Exhibitions</h2>
                 <ul>
                     <li>
@@ -265,29 +270,27 @@
                         Load More
                     </a>
                 </div>
-                <article class="stories">
-                    <h2>Stories</h2>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <figure>
-                                    <img src="./img/GALLERYHYUNDAI/MichaelCraig-Martin-GALLERYHYUNDAI/stories.jpg" alt="story">
-                                </figure>
-                                <p>News</p>
-                                <p>Micheal Craig-Martin 마이클 크레이그-마틴 : Here and Now</p>
-                            </a>
-                        </li>
-        
-                    </ul>
-                </article>
-        
+    
+            <article class="stories">
+                <h2>Stories</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/GALLERYHYUNDAI/MichaelCraig-Martin-GALLERYHYUNDAI/stories.jpg" alt="story">
+                            </figure>
+                            <p>News</p>
+                            <p>Micheal Craig-Martin 마이클 크레이그-마틴 : Here and Now</p>
+                        </a>
+                    </li>
+    
+                </ul>
             </article>
     
         </section>
+
+
     </main>
-
-
-
     <footer>
         <ul>
             <li><a href="https://www.instagram.com/galleryhyundai/">INSTAGRAM</a></li>    

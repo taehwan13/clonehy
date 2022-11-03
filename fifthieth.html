@@ -41,6 +41,7 @@
                 </ul>
             </div>
 
+            <div class="srchbtn"><button></button></div>
             <div class="headsearch">
                 <form>
                     <input type="text" name="search" placeholder="Search">
@@ -57,6 +58,7 @@
         const headSrchBtn = document.querySelector('.headSrchBtn');
         const headSearch = document.querySelector('.headsearch');
         const closeBtn = document.querySelector('.closeBtn');
+        const searchBtn = document.querySelector('.srchbtn > button');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
@@ -69,6 +71,11 @@
             closeBtn.classList.toggle('active');
         })
 
+        searchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
         closeBtn.addEventListener('click',function(){
             headSrchBtn.classList.toggle('active');
             headSearch.classList.toggle('active');

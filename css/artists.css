@@ -33,14 +33,15 @@ main{
     background: none;
     font-size: 1rem;
     color:#999999;
+    overflow: hidden;
 }
 
 .artinav ul li button:hover{
     color:#222222;
     cursor: pointer;
 }
-.artinav .a-btn li.active button{
-    color:#222222;font-weight: 700;}
+.artinav .a-btn li button.active{
+    color:#222222; font-weight: 700;}
 
 .artinav ul li:nth-child(1):before{
     content: '';
@@ -55,7 +56,8 @@ main{
     width:100%; height:auto;
     margin: 100px auto;
     min-height: 580px;
-    padding: 0 10%;
+    padding: 0 15px;
+    overflow: hidden;
 }
 
 .obj .artlist{
@@ -65,18 +67,21 @@ main{
 }
 
 .obj .artlist ul{
+    width:100%;
     font-size: 1.1em;
     font-weight: 400;
-    display:none;
+    display:flex;
     flex-wrap: wrap;
-
+    flex-direction: row;
+    overflow: hidden;
 }
 
 .obj .artlist ul li{
+    width:50%;
     font-weight: 500;
     margin-top: 10px;
+    overflow: hidden;
 }
-.art-artists{display:flex;}
 
 .obj .artlist ul.active {
     display:flex;
@@ -87,72 +92,71 @@ main{
 
 .art-hover{width:40%;}
 .art-hover figure{width:100%;}
-.art-hover figure img{display:none; width:100%;}
+.art-hover figure img{width:100%;}
 .art-hover.active figure img{display:block; width:100%; margin:0;}
 
 /* ================================================================================================
 ================================================================================================
 ================================================================================================ */
-        @media(max-width:1023px){
+        @media(max-width:767px){
+
             main{
-                margin: 100px auto;
-                width: 98%;
+                margin:70px auto;
             }
-
-            .artinav{
-            }
-            
-            .artinav ul{
-                width:80%;
-                margin: 0 auto;
-                display:flex;
-                justify-content: center;
-                font-weight: 200;
-            }
-            
-            .artinav ul li{
-                width:auto;
-            }
-            
-            .artinav ul li::before{
-                content: '';
-                border-left: 1px solid #e5e5e5;
-                margin-right:20px;
-                margin-left:20px;
-            }
-            
-            .artinav ul li a{}
-            
-            .artinav ul li:nth-child(1):before{
-                content: '';
-                border:none;
-                margin-right:50px;
-            }
-
-            .obj{
-                width:100%; height:auto;
-                margin: 100px auto;
-            }
-            .art{display:none;}
-
-            .obj .artlist{           
-            }
-
-            .obj .artlist .artists{
-                font-size: 1em;
-                font-weight: 400;
-                display:inline-block;
-                flex-wrap: wrap;
-            
-            }
-
-            .obj .artlist .artists li{
+            .obj{margin:30px auto;}
+            .obj .artlist {
                 width:100%;
-                margin-top: 10px;
+                text-align: center;
+            }
+            .artinav ul{
+                display: block;
+                position: relative;
+                width: 100%;
+                padding: 14px 0 11px;
+                border: 1px solid #d6d6d6;
+                letter-spacing: 0.05em;
+                text-align: center;
             }
 
+            .a-btn li{display:none;}
+            .a-btn li.active{display:block;}
+            .a-btn.active li {display:block;}
 
+            .artinav ul li::before{
+                
+                display:none;
+            }
 
+            .artinav ul::after{
+                content: '';
+                display:inline-block;
+                width:20px; height:20px;
+                background: url(../img/ico_package_2x.png) 0 0 / 700% no-repeat;
+                background-position: -67px -133px;
+                position: absolute;
+                top:25%; right:2%;
+            }
+
+            .artinav ul.active::after{
+                content: '';
+                display:inline-block;
+                width:20px; height:20px;
+                background: url(../img/ico_package_2x.png) 0 0 / 700% no-repeat;
+                background-position: -105px -133px;
+                position: absolute;
+                top:10px; right:2%;
+                
+            }
+
+            
+            .obj .artlist ul{
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .art-hover{display:none;}
 
 
 

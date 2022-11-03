@@ -20,6 +20,9 @@
     <title>Document</title>
     <link href="./css/artists.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script defer src="./js/artists.js"></script>
 </head>
 <body>
     <header>
@@ -42,6 +45,7 @@
                 </ul>
             </div>
 
+            <div class="srchbtn"><button></button></div>
             <div class="headsearch">
                 <form>
                     <input type="text" name="search" placeholder="Search">
@@ -58,6 +62,7 @@
         const headSrchBtn = document.querySelector('.headSrchBtn');
         const headSearch = document.querySelector('.headsearch');
         const closeBtn = document.querySelector('.closeBtn');
+        const searchBtn = document.querySelector('.srchbtn > button');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
@@ -70,6 +75,11 @@
             closeBtn.classList.toggle('active');
         })
 
+        searchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
         closeBtn.addEventListener('click',function(){
             headSrchBtn.classList.toggle('active');
             headSearch.classList.toggle('active');
@@ -81,7 +91,7 @@
     <main>
         <div class="artinav">
             <ul class="a-btn">
-                <li class="active"><button>Artists</button></li>
+                <li class="active"><button class="active">Artists</button></li>
                 <li><button>Korean Modern Masters</button></li>
                 <li><button>Works By</button></li>
                 <li><button>All</button></li>
@@ -90,291 +100,20 @@
 
         <div class="obj">
             <div class="artlist">
-                <ul class="art-artists active">
-<!--                     <li><a href="#">Ayoung Kim</a>
+                <ul class="art-artists">
+<!--                    <li><a href="#">Ayoung Kim</a>
                     </li>
-                    <li><a href="./martin.html">Micheal Craig-Martin</a>
-                    </li>
-                    <li><a href="#">Choi Minhwa</a>
-                    </li>
-                    <li><a href="#">Chung Sang-Hwa</a>
-                    </li>
-                    <li><a href="#">Chung Zuyoung</a>
-                    </li>
-                    <li><a href="#">Fred Sandback</a>
-                    </li>
-                    <li><a href="#">Ik-Joong Kang</a>
-                    </li>
-                    <li><a href="#">Iván Navarro</a>
-                    </li>
-                    <li><a href="#">Jeon Joonho</a>
-                    </li>
-                    <li><a href="#">Kang Seung Lee</a>
-                    </li>
-                    <li><a href="#">Kim Tschang-Yeul Estate</a>
-                    </li>
-                    <li><a href="#">Lee Kang-So</a>
-                    </li>
-                    <li><a href="#">Lee Ufan</a>
-                    </li>
-                    <li><a href="#">Minjung Kim</a>
-                    </li>
-                    <li><a href="#">Moon Kyungwon</a>
-                    </li>
-                    <li><a href="#">Moon Kyungwon & Jeon Joonho</a>
-                    </li>
-                    <li><a href="#">Park Hyunki Estate</a>
-                    </li>
-                    <li><a href="#">Robert Indiana</a>
-                    </li>
-                    <li><a href="#">Sabine Moritz</a>
-                    </li>
-                    <li><a href="#">Seulgi Lee</a>
-                    </li>
-                    <li><a href="#">Seung-taek Lee</a>
-                    </li>
-                    <li><a href="#">Yang Jung Uk</a>
-                    </li> -->
+-->
                 </ul>
 
- <!--                <ul class="art-korean">
-                    <li><a href="#">Chang Ucchin</a>
-                    </li>
-                    <li><a href="#">Lee Jung Seob</a>
-                    </li>
-                    <li><a href="#">Chun Kyungja</a>
-                    </li>
-                    <li><a href="#">Han Mook</a>
-                    </li>
-                    <li><a href="#">Lee Dai-won</a>
-                    </li>
-                    <li><a href="#">Oh Chi HO</a>
-                    </li>
-                    <li><a href="#">To SangBong</a>
-                    </li>
-                </ul>
-
-                <ul class="art-worksby">
-                    <li><a href="#">Choong Sup Lim</a>
-                    </li>
-                    <li><a href="#">Chung Changsup</a>
-                    </li>
-                    <li><a href="#">François Morellet</a>
-                    </li>
-                    <li><a href="#">Nam June Paik</a>
-                    </li>
-                    <li><a href="#">Park Seo-Bo</a>
-                    </li>
-                    <li><a href="#">Yoo Youngkuk</a>
-                    </li>
-                </ul>
-
-                <ul class="art-all">
-                    <li><a href="#">Ayoung Kim</a>
-                    </li>
-                    <li><a href="./martin.html">Micheal Craig-Martin</a>
-                    </li>
-                    <li><a href="#">Choi Minhwa</a>
-                    </li>
-                    <li><a href="#">Chung Sang-Hwa</a>
-                    </li>
-                    <li><a href="#">Chung Zuyoung</a>
-                    </li>
-                    <li><a href="#">Fred Sandback</a>
-                    </li>
-                    <li><a href="#">Ik-Joong Kang</a>
-                    </li>
-                    <li><a href="#">Iván Navarro</a>
-                    </li>
-                    <li><a href="#">Jeon Joonho</a>
-                    </li>
-                    <li><a href="#">Kang Seung Lee</a>
-                    </li>
-                    <li><a href="#">Kim Tschang-Yeul Estate</a>
-                    </li>
-                    <li><a href="#">Lee Kang-So</a>
-                    </li>
-                    <li><a href="#">Lee Ufan</a>
-                    </li>
-                    <li><a href="#">Minjung Kim</a>
-                    </li>
-                    <li><a href="#">Moon Kyungwon</a>
-                    </li>
-                    <li><a href="#">Moon Kyungwon & Jeon Joonho</a>
-                    </li>
-                    <li><a href="#">Park Hyunki Estate</a>
-                    </li>
-                    <li><a href="#">Robert Indiana</a>
-                    </li>
-                    <li><a href="#">Sabine Moritz</a>
-                    </li>
-                    <li><a href="#">Seulgi Lee</a>
-                    </li>
-                    <li><a href="#">Seung-taek Lee</a>
-                    </li>
-                    <li><a href="#">Yang Jung Uk</a>
-                    </li>
-                    <li><a href="#">Chang Ucchin</a>
-                    </li>
-                    <li><a href="#">Lee Jung Seob</a>
-                    </li>
-                    <li><a href="#">Chun Kyungja</a>
-                    </li>
-                    <li><a href="#">Han Mook</a>
-                    </li>
-                    <li><a href="#">Lee Dai-won</a>
-                    </li>
-                    <li><a href="#">Oh Chi HO</a>
-                    </li>
-                    <li><a href="#">To SangBong</a>
-                    </li>
-                    <li><a href="#">Choong Sup Lim</a>
-                    </li>
-                    <li><a href="#">Chung Changsup</a>
-                    </li>
-                    <li><a href="#">François Morellet</a>
-                    </li>
-                    <li><a href="#">Nam June Paik</a>
-                    </li>
-                    <li><a href="#">Park Seo-Bo</a>
-                    </li>
-                    <li><a href="#">Yoo Youngkuk</a>
-                    </li>
-                </ul> -->
             </div>
+            
             <div class="art-hover">
                 <figure>
                     <!-- <img src="./img/GALLERYHYUNDAI/Artists/1.jpg" alt="김아영"> -->
                 </figure>
             </div>
         </div>
-
-        <script>
-            const aBtn = document.querySelectorAll('.a-btn li');
-            const aList = document.querySelector('.obj .artlist ul');
-            const artJpg = document.querySelector('.art-hover figure');
-            
-
-            let i = 0;
-            aBtn.forEach(function(btn,key){
-                btn.addEventListener('click',function(){
-                    aBtn[i].classList.remove('active');
-                    aList[i].classList.remove('active');
-
-                    this.classList.add('active');
-                    aList[key].classList.add('active');
-                    i=key;
-                })
-            });
-
-            const art_List = document.querySelector('.art-all');
-                let elList = '';
-                let dataList = {
-                        "Artists" : {
-                            "Ayoung Kim":"1.jpg",
-                            "Micheal Craig-Martin":"2.jpg",
-                            "Choi Minhwa":"3.jpg",
-                            "Chung Sang-Hwa":"4.jpg",
-                            "Chung Zuyoung":"5.jpg",
-                            "Fred Sandback":"6.jpg",
-                            "Ik-Joong Kang":"7.jpg",
-                            "Iván Navarro":"8.jpg",
-                            "Jeon Joonho":"9.jpg",
-                            "Kang Seung Lee":"10.jpg",
-                            "Kim Tschang-Yeul Estate":"11.jpg",
-                            "Lee Kang-So":"12.jpg",
-                            "Lee Ufan":"13.jpg",
-                            "Minjung Kim":"14.jpg",
-                            "Moon Kyungwon":"15.jpg",
-                            "Moon Kyungwon & Jeon Joonho":"16.jpg",
-                            "Park Hyunki Estate":"17.jpg",
-                            "Robert Indiana":"18.jpg",
-                            "Sabine Moritz":"19.jpg",
-                            "Seulgi Lee":"20.jpg",
-                            "Seung-taek Lee":"21.jpg",
-                            "Yang Jung Uk":"22.jpg"
-                        },
-                        "Korean Modern Masters" : {
-                            "Chang Ucchin":"23.jpg",
-                            "Lee Jung Seob":"24.jpg",
-                            "Chun Kyungja":"25.jpg",
-                            "Han Mook":"26.jpg",
-                            "Lee Dai-won":"27.jpg",
-                            "Oh Chi HO":"28.jpg",
-                            "To SangBong":"29.jpg"
-                        },
-
-                        "Works By" : {
-                            "Choong Sup Lim":"30.jpg",
-                            "Chung Changsup":"31.jpg",
-                            "François Morellet":"32.jpg",
-                            "Nam June Paik":"33.jpg",
-                            "Park Seo-Bo":"34.jpg",
-                            "Yoo Youngkuk":"35.jpg"
-                        },
-
-                        "All" : {
-                            "Ayoung Kim":"1.jpg",
-                            "Micheal Craig-Martin":"2.jpg",
-                            "Choi Minhwa":"3.jpg",
-                            "Chung Sang-Hwa":"4.jpg",
-                            "Chung Zuyoung":"5.jpg",
-                            "Fred Sandback":"6.jpg",
-                            "Ik-Joong Kang":"7.jpg",
-                            "Iván Navarro":"8.jpg",
-                            "Jeon Joonho":"9.jpg",
-                            "Kang Seung Lee":"10.jpg",
-                            "Kim Tschang-Yeul Estate":"11.jpg",
-                            "Lee Kang-So":"12.jpg",
-                            "Lee Ufan":"13.jpg",
-                            "Minjung Kim":"14.jpg",
-                            "Moon Kyungwon":"15.jpg",
-                            "Moon Kyungwon & Jeon Joonho":"16.jpg",
-                            "Park Hyunki Estate":"17.jpg",
-                            "Robert Indiana":"18.jpg",
-                            "Sabine Moritz":"19.jpg",
-                            "Seulgi Lee":"20.jpg",
-                            "Seung-taek Lee":"21.jpg",
-                            "Yang Jung Uk":"22.jpg",
-                            "Chang Ucchin":"23.jpg",
-                            "Lee Jung Seob":"24.jpg",
-                            "Chun Kyungja":"25.jpg",
-                            "Han Mook":"26.jpg",
-                            "Lee Dai-won":"27.jpg",
-                            "Oh Chi HO":"28.jpg",
-                            "To SangBong":"29.jpg",
-                            "Choong Sup Lim":"30.jpg",
-                            "Chung Changsup":"31.jpg",
-                            "François Morellet":"32.jpg",
-                            "Nam June Paik":"33.jpg",
-                            "Park Seo-Bo":"34.jpg",
-                            "Yoo Youngkuk":"35.jpg"
-                        },
-                };
-
-                console.log(   dataList["Works By"]["Choong Sup Lim"]);
-
-                console.log( Object.keys(dataList)[1]  );
-
-                let artLi ='';
-                for(let key in dataList['Artists']){
-                    //console.log(`${dataList['Artists'][key]}`);
-                    artLi += `<li><a href="#">${key}</a></li>`;
-                    console.log(`<li><a href="#">${key}</a></li>`)
-                }
-                aList.innerHTML = artLi;
-                
-
-
-                
-
-
-                
-                
-                
-        
-        </script>
-
 
     </main>
 

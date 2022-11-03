@@ -19,6 +19,7 @@
     <meta property="twitter:url"           content="https://taehwan13.github.io/clonehy/" />    <title>Document</title>
     <link href="./css/matti.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <script defer src="./js/matti.js"></script>
 </head>
 <body>
     <header>
@@ -41,6 +42,7 @@
                 </ul>
             </div>
 
+            <div class="srchbtn"><button></button></div>
             <div class="headsearch">
                 <form>
                     <input type="text" name="search" placeholder="Search">
@@ -57,6 +59,7 @@
         const headSrchBtn = document.querySelector('.headSrchBtn');
         const headSearch = document.querySelector('.headsearch');
         const closeBtn = document.querySelector('.closeBtn');
+        const searchBtn = document.querySelector('.srchbtn > button');
 
         menubtn.onclick = function(){
             menubtn.classList.toggle('active');
@@ -69,6 +72,11 @@
             closeBtn.classList.toggle('active');
         })
 
+        searchBtn.addEventListener('click',function(){
+            headSrchBtn.classList.toggle('active');
+            headSearch.classList.toggle('active');
+            closeBtn.classList.toggle('active');
+        })
         closeBtn.addEventListener('click',function(){
             headSrchBtn.classList.toggle('active');
             headSearch.classList.toggle('active');
@@ -77,53 +85,53 @@
 
     </script>
     <main>
-        <div>
+        <div class="mainimg">
             <figure>
                 <img src="./img/GALLERYHYUNDAI/MattiBraun_KuSol-GALLERY_yythkg/802090cd-3dad-463b-a02e-8b74287dbbfd.jpg" alt="matti main">
             </figure>
         </div>
 
         <section class="artinav">
-            <h1>MATTI BRAUN 마티 브라운 :KU SOL</h1>
-            <div class="menunav">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Selected Works</a></li>
-                    <li><a href="#">Installation Views</a></li>
-                    <li><a href="#">Stories</a></li>
-                </ul>
-            </div>
-            <div class="textbox">
-                <div class="info">
-                    <article>
-                        <h3>Exhibition Details</h3>
-                        <p>Matti Braun 마티 브라운 : Ku Sol
-                            Sep 21 - Oct 23, 2022</p>
-                    </article>
-    
-                    <article>
-                        <h3>Artist</h3>
-                        <a href="#">Matti Braun</a>
-                    </article>
+            <h2>MATTI BRAUN 마티 브라운 :KU SOL</h2>
+                <div class="menunav">
+                    <ul>
+                        <li><button>About</button></li>
+                        <li><button>Selected Works</button></li>
+                        <li><button>Installation Views</button></li>
+                        <li><button>Stories</button></li>
+                    </ul>
                 </div>
-                <div class="txt">
-                    <p>*한국어 안내는 하단의 'Read More'를 클릭하세요.</p>
-                    <p>Gallery Hyundai presents Ku Sol, the first solo exhibition in Asia by German artist Matti Braun, from September 21 to October 23. </p>
-                    <p>The exhibition features a wide selection of around 50 key works by Braun, including his beautiful abstract painting series produced by applying different colors of dye to silk; his glassworksproduced in collaboration with Bavarian glass artisans using traditional techniques; and his set of six photographs of an experimental play inspired by Indian film director Satyajit Ray’s unrealized script titled The Alien. </p>
-                    <p>Working in a broad range of areas including not only art but also culture, history and science, Matti Braun weaves together vast webs of meaning as he enthusiastically discovers and explores lesser-known narratives. His work is based on research into cultural migration, exchange and transformation across Eastern and Western times and spaces, as long with particular figures and themes ranging from physicist Vikram Sarabhai and Mahatma Gandhi to Le Corbusier, India’s space exploration program, the unfilmed script for The Alien by Satyajit Ray, and Steven Spielberg’s E.T. In the process, it provides an opportunity to viewers to break with standardized frameworks of interpretation and form readings based on their own individual narratives. The exhibition title Ku Sol is a poetic evocation of Braun’s artistic vision, which involves forging cultural and linguistic connections. Combining the Finnish word “kuu” meaning “moon” with the Latin word “sol” meaning “sun,” it is a title with both natural and cosmic associations, echoing the artist’s approach of incorporating intersubjectivity and ambiguity without representing a particular object. </p>
-                    <p>For the colorful glassworksplaced on round tables, Braun collaborated with glass artisans using the traditional craft techniques of Bavaria. This glass sculpture work is produced with a traditional craft technique that involves inserting tubes into molten glass and blowing, yet the resulting mysterious combinations of colors seem untouched by human</p>
-                    <div>
-                        <a href="#">Read More</a>
-                        <ul>
-                            <li><a href="#" alt="뉴스레터"></a></li>
-                            <li><a href="#" alt="트위터"></a></li>
-                            <li><a href="#" alt="페이스북"></a></li>
-                            <li>Share</li>
-                        </ul>
+                <div class="textbox">
+                    <div class="info">
+                        <article>
+                            <h3>Exhibition Details</h3>
+                            <p>Matti Braun 마티 브라운 : Ku Sol
+                                Sep 21 - Oct 23, 2022</p>
+                        </article>
+        
+                        <div>
+                            <h3>Artist</h3>
+                            <a href="#">Matti Braun</a>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <p>*한국어 안내는 하단의 'Read More'를 클릭하세요.</p>
+                        <p>Gallery Hyundai presents Ku Sol, the first solo exhibition in Asia by German artist Matti Braun, from September 21 to October 23. </p>
+                        <p>The exhibition features a wide selection of around 50 key works by Braun, including his beautiful abstract painting series produced by applying different colors of dye to silk; his glassworksproduced in collaboration with Bavarian glass artisans using traditional techniques; and his set of six photographs of an experimental play inspired by Indian film director Satyajit Ray’s unrealized script titled The Alien. </p>
+                        <p>Working in a broad range of areas including not only art but also culture, history and science, Matti Braun weaves together vast webs of meaning as he enthusiastically discovers and explores lesser-known narratives. His work is based on research into cultural migration, exchange and transformation across Eastern and Western times and spaces, as long with particular figures and themes ranging from physicist Vikram Sarabhai and Mahatma Gandhi to Le Corbusier, India’s space exploration program, the unfilmed script for The Alien by Satyajit Ray, and Steven Spielberg’s E.T. In the process, it provides an opportunity to viewers to break with standardized frameworks of interpretation and form readings based on their own individual narratives. The exhibition title Ku Sol is a poetic evocation of Braun’s artistic vision, which involves forging cultural and linguistic connections. Combining the Finnish word “kuu” meaning “moon” with the Latin word “sol” meaning “sun,” it is a title with both natural and cosmic associations, echoing the artist’s approach of incorporating intersubjectivity and ambiguity without representing a particular object. </p>
+                        <p>For the colorful glassworksplaced on round tables, Braun collaborated with glass artisans using the traditional craft techniques of Bavaria. This glass sculpture work is produced with a traditional craft technique that involves inserting tubes into molten glass and blowing, yet the resulting mysterious combinations of colors seem untouched by human</p>
+                        <div>
+                            <a href="#">Read More</a>
+                            <ul>
+                                <li><a href="#" alt="뉴스레터"></a></li>
+                                <li><a href="#" alt="트위터"></a></li>
+                                <li><a href="#" alt="페이스북"></a></li>
+                                <li>Share</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
+
             <article class="works">
                 <h2>  Selected Works          </h2>
                 <ul>

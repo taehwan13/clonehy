@@ -2,32 +2,47 @@
 
 main{
     width:100%;
-    margin:0 auto;
+    margin:50px auto;
     max-width: 1640px;
 }
 
-main>div{
-    width:100%; height: auto;
+.mainimg{
+    width:100%; 
     padding: 0 40px;
     margin-bottom:100px;
-
 }
 
-main>div>figure{width:100%}
+.mainimg >figure{
+    width:100%; 
+    opacity: 1; 
+}
 
-main>div>figure>img{width:100%}
-
+.mainimg > figure>img{
+    width:100%;
+    height: calc(100vh - 122px);
+}
 main>.artinav{
     text-align: center;
 }
 
-main>.artinav>h1{
+main>.artinav>h2{
     color:#222222;
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 0.025rem;
     margin:40px 0;
 }
+
+main>.artinav> .menunav{
+    position: sticky;
+    left:0; top:10%;
+    height:10vh;
+    background-color: white;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+}
+
 main>.artinav> .menunav ul{
     width:100%;
     margin:0 auto;
@@ -51,8 +66,15 @@ main>.artinav> .menunav > ul>li:nth-child(1):before{
     display: none;
 }
 
-main>.artinav> .menunav > ul>li>a{}
+main>.artinav> .menunav > ul>li>button{
+    border:none;
+    background: transparent;
+    font-size: 1.15rem;
+}
 
+main>.artinav> .menunav > ul>li>button:hover{
+    cursor: pointer;
+}
 .textbox{
     width:80%;
     display:flex;
@@ -63,7 +85,6 @@ main>.artinav> .menunav > ul>li>a{}
 .textbox .info{
     width:30%;
 }
-.textbox .info > article{}
 .textbox .info > article > h3{
     font-size: 0.9rem;
     margin-bottom:5px;
@@ -76,7 +97,17 @@ main>.artinav> .menunav > ul>li>a{}
     margin-bottom: 10px;
 }
 
-.textbox .info > article > a{
+.textbox .info > div > h3{
+    font-size: 0.9rem;
+    margin-bottom:5px;
+}
+.textbox .info > div > p {    
+    font-size: 0.9rem;
+    letter-spacing: 0.09rem;
+    white-space: pre-line;
+    line-height: 1.5rem;
+    margin-bottom: 10px;}
+.textbox .info > div > a{
     font-size: 0.9rem;
     
 }
@@ -248,7 +279,7 @@ main>.artinav> .menunav > ul>li>a{}
     
 }
 .insviews ul li{
-    width:100%;
+    width:45%;
     margin: 0 30px;
     text-align: left;
 }
@@ -305,6 +336,18 @@ main>.artinav> .menunav > ul>li>a{}
         padding:0 5px;
     }
 
+    main>.artinav> .menunav{
+        position: sticky;
+        left:0; top:5%;
+        height:10vh;
+        background-color: white;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+    }
+    main>.artinav > h2{
+        font-size: 2rem;
+    }
     .menunav{
         padding:40px 0 ;
         padding-bottom:10px;
@@ -312,20 +355,114 @@ main>.artinav> .menunav > ul>li>a{}
         top:3%;
         z-index: 20;
         background-color: white;}
+    main>.artinav> .menunav > ul>li>button{
+        font-size: 1rem;
+}
+.works ul li{
+    width:48%;
+    margin:50px 10px;
+    position: relative;
+}
+
+.more a{margin:30px auto}
+
+.stories ul li a p:nth-of-type(2){
+    font-size: 0.9rem;
+    color:#222222;
+    font-weight: 500;
+}
+
+
+@media(max-width:767px){
+    .textbox{
+        display:block;
+        width:100%;
+        margin:100px auto;
+        padding:0 5px;
+    }
+    .textbox .info{width:100%; margin-bottom:10px;}
+    .textbox .txt{width:100%; margin-top: 30px;}
+    .textbox .txt>div{
+        display:block;
+    }
+    .textbox .txt>div>ul{
+        justify-content: center;
+    }
+    .textbox .txt > div > ul li{
+        border:1px solid #ccc;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+    .textbox .txt > div > ul li:nth-of-type(1) a::after{
+        content: '';
+        display:inline-block;
+        width:40px; height:40px;
+        background: url(../img/ico_package.png);
+        background-size: 256px auto;
+        background-position: -194px -188px;
+        margin-left: 5px;
+    }
+    
+    .textbox .txt > div > ul li:nth-of-type(2) a::after{
+        content: '';
+        display:inline-block;
+        width:40px; height:40px;
+        background: url(../img/ico_package.png);
+        background-size: 256px auto;
+        background-position: -130px -188px;
+        margin-left: 5px;
+    }
+    
+    .textbox .txt > div > ul li:nth-of-type(3) a::after{
+        content: '';
+        display:inline-block;
+        width:40px; height:40px;
+        background: url(../img/ico_package_2x.png);
+        background-size: 256px auto;
+        background-position: -66px -188px;
+        margin-left: 5px;
+    }
+    
+
+    .textbox .txt>div>ul>li:nth-child(4){display:none;}
+    .works h2{
+        font-size: 1rem;
+        text-align: left;
+        margin: 0 30px;
+    }
+    .works ul{display:flex;}
     .works ul li{
-        width:48%;
-        margin:50px 10px;
+        width:47%;
         position: relative;
     }
-
-    .more a{margin:30px auto}
-
-    .stories ul li a p:nth-of-type(2){
-        font-size: 0.9rem;
-        color:#222222;
-        font-weight: 500;
+    .insviews h2{
+        font-size: 1rem;
+        text-align: left;
+        margin: 0 30px;
     }
+    .insviews ul{
+        display:block;
+        margin-top:50px;
+    }
+    .insviews ul li{
+        width:94%;
+        margin-bottom:20px;
+    }
+
+    .stories h2{
+        font-size: 1rem;
+        text-align: left;
+        margin: 0 30px;
+    }
+    .stories ul{
+        margin-top: 50px;
+    }
+
+
+
 }
+    }
+
 
 
 

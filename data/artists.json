@@ -1,0 +1,44 @@
+{
+    "Artists" : {
+        "Ayoung Kim":"1.jpg",
+        "Micheal Craig-Martin":"2.jpg",
+        "Choi Minhwa":"3.jpg",
+        "Chung Sang-Hwa":"4.jpg",
+        "Chung Zuyoung":"5.jpg",
+        "Fred Sandback":"6.jpg",
+        "Ik-Joong Kang":"7.jpg",
+        "Iván Navarro":"8.jpg",
+        "Jeon Joonho":"9.jpg",
+        "Kang Seung Lee":"10.jpg",
+        "Kim Tschang-Yeul Estate":"11.jpg",
+        "Lee Kang-So":"12.jpg",
+        "Lee Ufan":"13.jpg",
+        "Minjung Kim":"14.jpg",
+        "Moon Kyungwon":"15.jpg",
+        "Moon Kyungwon & Jeon Joonho":"16.jpg",
+        "Park Hyunki Estate":"17.jpg",
+        "Robert Indiana":"18.jpg",
+        "Sabine Moritz":"19.jpg",
+        "Seulgi Lee":"20.jpg",
+        "Seung-taek Lee":"21.jpg",
+        "Yang Jung Uk":"22.jpg"
+    },
+    "Korean Modern Masters" : {
+        "Chang Ucchin":"23.jpg",
+        "Lee Jung Seob":"24.jpg",
+        "Chun Kyungja":"25.jpg",
+        "Han Mook":"26.jpg",
+        "Lee Dai-won":"27.jpg",
+        "Oh Chi HO":"28.jpg",
+        "To SangBong":"29.jpg"
+    },
+
+    "Works By" :{
+        "Choong Sup Lim":"30.jpg",
+        "Chung Changsup":"31.jpg",
+        "François Morellet":"32.jpg",
+        "Nam June Paik":"33.jpg",
+        "Park Seo-Bo":"34.jpg",
+        "Yoo Youngkuk":"35.jpg"
+    }
+}
