@@ -55,7 +55,6 @@ header>div{
     padding-top:20px;
     display: flex;
     justify-content: space-between;
-    align-items:left;
     background-color: white;
     align-items: center;
 }
@@ -401,7 +400,6 @@ header>div>.headsearch>form>input{
     padding-left: 20px;
     border: 1px solid #66666659;
     letter-spacing: 0.1em;
-    background-color: none;
     display: flex;
     align-items: center;
     font-size: 1em;
@@ -440,7 +438,7 @@ footer ul li{
 
     font-size: 0.75em;
     color:#222222;
-    text-align: top;
+    text-align:start;
     display: inline-block;
     margin:0 5px;
 
@@ -448,7 +446,7 @@ footer ul li{
 
 footer ul li a{
     display: flex;
-    justify-content: baseline;
+    justify-content:baseline;
     height:30px;
 
 }
@@ -512,7 +510,6 @@ footer > div >  p{
     footer ul li{
         font-size: 0.75em;
         color:#222222;
-        text-align: top;
         display: inline-block;
         width:auto;
         margin:0 10px;
@@ -521,7 +518,6 @@ footer > div >  p{
     footer ul li a{
         width:20px;
         display: block;
-        justify-content: baseline;
         height:30px;
         overflow: hidden;
     }
