@@ -248,7 +248,6 @@ main>.artinav> .menunav > ul>li>button:hover{
     padding-left: 30px;
     border: 1px solid #66666659;
     letter-spacing: 0.025rem;
-    background-color: none;
     display: flex;
     align-items: center;
     font-size: 1em;
